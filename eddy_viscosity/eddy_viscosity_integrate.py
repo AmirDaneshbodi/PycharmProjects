@@ -39,8 +39,6 @@ def ainslie(ct, u0, distance_parallel, distance_perpendicular):
     def E(x1, Uf, Ud, Dm):  # Eddy viscosity term
         return F(x1) * (0.015 * b(Dm) * (Uf - Ud)) + (k ** 2.0) * I0 / 100.0
 
-    Uc = U0 * (1.0 - Dmi)  # Boundary condition at x = 2.0
-    d = Dmi
     Uc1[0] = U0 * (1.0 - Dmi)  # Boundary condition at x = 2.0
     d1[0] = Dmi
     for i in range(1, n):  # For all positions in the wake centreline direction. Recursive. Whole grid
@@ -55,6 +53,7 @@ def ainslie(ct, u0, distance_parallel, distance_perpendicular):
 
     ## Define function to integrate.
 
+    ## p. 77 Adapting and calibration of existing wake models to meet the conditions inside offshore wind farms. For integrand squared momentum deficit.
     def G(r, theta):
         z = sqrt(Y ** 2.0 + r ** 2.0 + 2.0 * Y * r * cos(theta))
         gauss = U0 * (1.0 - d1[n - 1] * exp(- 3.56 * (z / b(d1[n - 1])) ** 2.0))
