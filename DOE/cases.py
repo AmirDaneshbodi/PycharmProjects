@@ -9,7 +9,7 @@ class OptimizationConstrained(Assembly):
     """Constrained optimization of the Paraboloid component."""
 
     def configure(self):
-        """ Creates a new Assembly containing a Paraboloid and an optimizer"""
+        """ Creates counter new Assembly containing counter Paraboloid and an optimizer"""
 
         # Create Paraboloid component instances
         self.add('paraboloid', Paraboloid())

@@ -97,7 +97,6 @@ def analysis():
                 parallel_distance[distance[i][1]] = determine_front(angle3, layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
                 perpendicular_distance[distance[i][1]] = wake.crosswind_distance(deg2rad(angle3), layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
                 if perpendicular_distance[distance[i][1]] <= 1.7: ## 1.7 gives same results as a bigger distance, many times faster.
-                    # print turbine, i, parallel_distance[i], perpendicular_distance[i], total_speed[]
                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = ainslie(Ct(total_speed[distance[turbine][1]]), total_speed[distance[turbine][1]], parallel_distance[distance[i][1]], perpendicular_distance[distance[i][1]])
                 else:
                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = 0.0
@@ -122,7 +121,7 @@ def analysis():
         # for n in range(nt):
         #     aver[n] += power(total_speed[n]) / 360.0
 
-        turb_data.write('{0:f}\n'.format(total_speed[14]))
+        turb_data.write('{0:f}\n'.format(power(total_speed[14])))
 
         # Farm efficiency
         profit = 0.0

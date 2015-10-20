@@ -16,7 +16,7 @@ windrose = open('horns_rev_windrose2.dat', 'r')
 # draw = open('draw_horns_rev_jensen.dat', 'w')
 # draw.write('# This file has the turbines affected by the wake of one turbine at one direction.\n')
 # draw2 = open('drawline.dat', 'w')
-# turb_data = open('turb17_jensen.dat', 'w')
+turb_data = open('turb17_jensen.dat', 'w')
 direction = open('direction_farmpower_jensen_horns.dat', 'w')
 # direction.write('# This file includes the efficiency of the whole farm by wind direction.\n# Wind direction angle\tFarm efficiency\n')
 # row = open('row_data_jensen.dat', 'w')
@@ -106,7 +106,7 @@ def analysis():
         # for n in range(nt):
         #     aver[n] += power(U[n]) / 360.0
 
-        # turb_data.write('{0:f}\n'.format(power(U[14])))
+        turb_data.write('{0:f}\n'.format(power(U[14])))
 
         # Farm efficiency
         profit = 0.0
@@ -121,7 +121,7 @@ def analysis():
     print 'total farm efficiency is {0:f} %'.format(summation)
     # for n in range(nt):
     #     turb_data.write('{0:f}\n'.format(aver[n]))
-    # turb_data.close()
+    turb_data.close()
     # output.close()
     # output2.close()
     # draw.close()

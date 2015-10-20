@@ -31,7 +31,6 @@ def jensen(a, windrose_angle, windrose_speed, windrose_frequency):
             return 0.0
 
     # for U0 in range(4, 20):
-    nt = 80  # Number of turbines
     summation = 0.0
 
     def distance_to_front(x, y, theta, r):

@@ -32,7 +32,7 @@ vector, a technique called dither, improves convergence behaviour significantly,
 especially for noisy objective functions. It has also been found that setting CR to a
 low value, e.g. CR=0.2 helps optimizing separable functions since it fosters the search
 along the coordinate axes. On the contrary this choice is not effective if parameter
-dependence is encountered, something which is frequently occuring in real-world optimization
+dependence is enaed, something which is frequently occuring in real-world optimization
 problems rather than artificial test functions. So for parameter dependence the choice of
 CR=0.9 is more appropriate. Another interesting empirical finding is that rasing NP above,
 say, 40 does not substantially improve the convergence, independent of the number of

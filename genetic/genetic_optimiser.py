@@ -9,9 +9,9 @@ from wake import distance
 import time
 from joblib import Parallel, delayed
 
-result = open('best_layout_jensen.dat', 'w')
-result2 = open('fitness_jensen.dat', 'w')
-average = open('average_fitness_jensen.dat', 'w')
+result = open('best_layout_jensen.dat', 'w', 1)
+result2 = open('fitness_jensen.dat', 'w', 1)
+average = open('average_fitness_jensen.dat', 'w', 1)
 start_time = time.time()
 
 try:
@@ -84,19 +84,16 @@ try:
         aver = grade_gen(fit, float(n_ind))
 
         average.write('{0:f}\n'.format(aver))
-        sys.stdout.flush()
 
         for i in range(n_ind):
             fit[i] = [fit[i], i]
         for x in range(nt):
             result.write('{0:d}\t{1:d}\n'.format(int(pop[max(fit)[1]][x][0]), int(pop[max(fit)[1]][x][1])))
         result.write('\n')
-        sys.stdout.flush()
 
         for y in range(n_ind):
             result2.write('{0:f}\n'.format(fit[y][0]))
         result2.write('\n')
-        sys.stdout.flush()
 
         graded = [x[1] for x in sorted(fit, reverse=True)]
 

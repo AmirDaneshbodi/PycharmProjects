@@ -1,3 +1,7 @@
-a = [1, 2, 3, 4]
-
-print [i > 3 for i in a]
+a = 2
+b = []
+for x in range(10):
+    a += 1
+    if a == 8:
+        b.append(a)
+    print b

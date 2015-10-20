@@ -10,39 +10,30 @@ from jensenOKoptimise import jensen as fit
 
 import time
 
-def movement(vel, best_local, particles, best_layout, k, nt):
+def repair(particles, vel, best_local, best_layout, nt):
+    ## Solving Constrained Nonlinear Optimization Problems with Particle Swarm Optimization by Xiaohui Hu and Russell Eberhart. For 1.49445 learning coefficients.
     vel = (0.5 + random() / 2.0) * vel + 2.0 * random() * (best_local - particles) + 2.0 * random() * (best_layout - particles)
-    for t in range(nt): # Velocity half the maximum distance between boundaries. following: Particle Swarm Optimization: A Tutorial by James Blondin PSO
-        if vel[t][0] > k * 2728.5:
-            vel[t][0] = k * 2728.5
-        if vel[t][0] < - k * 2728.5:
-            vel[t][0] = - k * 2728.5
-        if vel[t][1] > k * 1953.5:
-            vel[t][1] = k * 1953.5
-        if vel[t][1] < - k * 1953.5:
-            vel[t][1] = - k * 1953.5
-    return particles + vel
+    particles += vel
+    for t in range(nt):  # Reflect on boundary
+        j = 1.0
+        w = 1.0
+        while particles[t][1] > 3907.0 or particles[t][1] < 0.0:
+            if particles[t][1] > 3907.0:
+                particles[t][1] = 3907.0 * 2.0 - particles[t][1]
+                j = random()
+            elif particles[t][1] < 0.0:
+                particles[t][1] = - particles[t][1]
+                j = random()
+        while particles[t][1] < - 3907.0 / 412.0 * particles[t][0] + 3907.0 or particles[t][1] > 3907.0 / 417.0 * (- particles[t][0] + 5457.0):
+            if particles[t][1] < - 3907.0 / 412.0 * particles[t][0] + 3907.0:
+                particles[t][0] = 2.0 * (412.0 / 3907.0) * (3907.0 - particles[t][1]) - particles[t][0]
+                w = random()
+            elif particles[t][1] > 3907.0 / 417.0 * (- particles[t][0] + 5457.0):
+                particles[t][0] = 2.0 * (5457.0 - particles[t][0] * 417.0 / 3907.0) - particles[t][0]
+                w = random()
+        vel[t] *= [j, w]
+    return particles, vel
 
-def efficiency(particles2, windrose_angle, windrose_speed, windrose_frequency, nt):
-    check = True
-    for tur in range(nt):
-        if particles2[tur][1] > 3907.0:
-            check = False
-            break
-        elif particles2[tur][1] < 0.0:
-            check = False
-            break
-        elif particles2[tur][1] > 3907.0 / 417.0 * (- particles2[tur][0] + 5457.0):
-            check = False
-            break
-        elif particles2[tur][1] < - 3907.0 / 412.0 * particles2[tur][0] + 3907.0:
-            check = False
-            break
-    if check:
-        fitness2 = fit(particles2, windrose_angle, windrose_speed, windrose_frequency)
-    else:
-        fitness2 = 0.0
-    return fitness2
 
 ## Inertia weight 0.5+rand/2.0, by: "Inertia weight strategies in particle swarm optimization" by Bansal et al.
 def pso_horns():
@@ -59,12 +50,12 @@ def pso_horns():
 
     windrose.close()
 
-    data = open('np400_layout_jensen.dat', 'w')
-    data2 = open('np400_random_layout_jensen.dat', 'w')
-    data3 = open('np400_best_global_fitness_jensen.dat', 'w', 1)
+    data = open('refpar_layout_jensen.dat', 'w')
+    data2 = open('refpar_random_layout_jensen.dat', 'w')
+    data3 = open('refpar_best_global_fitness_jensen.dat', 'w', 1)
 
-    np = 400 ## Number of particles in swarm
-    nt = 80
+    np = 5 ## Number of particles in swarm
+    nt = 21
     diam = 80.0
     particles = array([[[0.0, 0.0] for x in range(nt)] for x in range(np)])
 
@@ -112,28 +103,31 @@ def pso_horns():
 
         start_time2 = time.time()
 
-        # Fitness evaluation skipped if a turbine is out of boundaries. following: BrattonKennedy07 PSO.
+        # Fitness evaluation skipped if counter turbine is out of boundaries. following: BrattonKennedy07 PSO.
         # More 'repair' methods for particles out of boundaries shown in PhD thesis Helwig2010.
         # Chu2011 proves that the reflecting boundary method is better than random or absorbing boundary. TODO implement
 
-        fitness = Parallel(n_jobs=8)(delayed(efficiency)(particles[i], windrose_angle, windrose_speed, windrose_frequency, nt) for i in range(np))
+        fitness = Parallel(n_jobs=8)(delayed(fit)(particles[i], windrose_angle, windrose_speed, windrose_frequency) for i in range(np))
 
         for p in range(np):
-            if fitness[p] > best_own_fitness[p]:
+            if fitness[p] >= best_own_fitness[p]:
                 best_own_fitness[p] = fitness[p]
                 best_local[p] = particles[p]
-            if fitness[p] > best_global_fitness:
+            if fitness[p] >= best_global_fitness:
                 best_global_fitness = fitness[p]
                 best_layout = particles[p]
+                for i in range(nt):
+                    data.write('{2:d} {0:f} {1:f}\n'.format(best_layout[i][0], best_layout[i][1], i))
+                data.write('\n')
 
         for i in range(nt):
-            data.write('{2:d} {0:f} {1:f}\n'.format(best_layout[i][0], best_layout[i][1], i))
-            data2.write('{2:d} {0:f} {1:f}\n'.format(particles[119][i][0], particles[119][i][1], i))
+            data2.write('{2:d} {0:f} {1:f}\n'.format(particles[4][i][0], particles[4][i][1], i))
         data2.write('\n')
-        data.write('\n')
         data3.write('{0:f}\n'.format(best_global_fitness))
 
-        particles = Parallel(n_jobs=8)(delayed(movement)(vel[i], best_local[i], particles[i], best_layout, k, nt) for i in range(np))
+        move = Parallel(n_jobs=8)(delayed(repair)(particles[i], vel[i], best_local[i], best_layout, nt) for i in range(np))
+        particles = move[:][0]
+        vel = move[:][1]
 
         # Find minimum distance between turbines, and if two are closer than 1D, then randomise one of them.
         for b in range(np):

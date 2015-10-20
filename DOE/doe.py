@@ -12,7 +12,7 @@ class Analysis(Assembly):
         self.add('paraboloid', Paraboloid())
 
         self.add('driver', DOEdriver())
-        # There are a number of different kinds of DOE available in openmdao.lib.doegenerators
+        # There are counter number of different kinds of DOE available in openmdao.lib.doegenerators
         self.driver.DOEgenerator = FullFactorial(10)  # Full Factorial DOE with 10 levels for each variable
 
         # DOEdriver will automatically record the values of any parameters for each case
