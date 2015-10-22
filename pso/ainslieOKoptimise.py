@@ -9,7 +9,7 @@ def ainslie(a, windrose_angle, windrose_speed, windrose_frequency):
     from math import sqrt, log, cos, sin, tan
     from numpy import deg2rad
 
-    nt = 80
+    nt = len(a)
     D = 80.0  # Diameter
     summation = 0.0
 
@@ -85,4 +85,4 @@ def ainslie(a, windrose_angle, windrose_speed, windrose_frequency):
             efficiency = profit * 100.0 / (nt * power(total_speed[distance[0][1]]))
         efficiency_proportion[wind] = efficiency * windrose_frequency[wind] / 100.0
         summation += efficiency_proportion[wind]
-    return summation
+    return 100.0 - summation

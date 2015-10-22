@@ -40,8 +40,6 @@ def ainslie(ct, u0, distance_parallel, distance_perpendicular):
     def E(x1, Uf, Ud, Dm):  # Eddy viscosity term
         return F(x1) * (0.015 * b(Dm) * (Uf - Ud)) + (k ** 2.0) * I0 / 100.0
 
-    Uc = U0 * (1.0 - Dmi)  # Boundary condition at x = 2.0
-    d = Dmi
     Uc1[0] = U0 * (1.0 - Dmi)  # Boundary condition at x = 2.0
     d1[0] = Dmi
     for i in range(1, n):  # For all positions in the wake centreline direction. Recursive. Whole grid
@@ -55,6 +53,7 @@ def ainslie(ct, u0, distance_parallel, distance_perpendicular):
     ##### Code to calculate average wake deficit in all area of the rotor ###############
 
     ## Define function to integrate.
+
 
     def G(r, theta):
         z = sqrt(Y ** 2.0 + r ** 2.0 + 2.0 * Y * r * cos(theta))

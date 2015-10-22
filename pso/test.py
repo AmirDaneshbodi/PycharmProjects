@@ -1,7 +1,3 @@
-a = 2
-b = []
-for x in range(10):
-    a += 1
-    if a == 8:
-        b.append(a)
-    print b
+a = [1, 2, 3]
+b = [100]
+print [a - b for a, b in zip(a, b)]

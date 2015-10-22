@@ -1,11 +1,8 @@
-from math import sqrt, log, tan, cos
-from numpy import deg2rad, array
+inputfile = open('cp_hornsrev.dat', 'r')
+cp = []
+for line in inputfile:
+    columns = line.split()
+    cp.append(float(columns[1]))
 
-def distance_to_front(x, y, theta, r):
-    theta = deg2rad(theta)
-    return abs(x + tan(theta) * y - r / cos(theta)) / sqrt(1.0 + tan(theta) ** 2.0)
-
-if __name__ == '__main__':
-    print distance_to_front(2, 5, 0, 100)
-    a = array([[1,6],[3,5],[5,4]])
-    print a[:,1]
+for w in range(23):
+    print w + 3.0, 0.0005 * 1.225 * 40 ** 2.0 * 3.141592 * cp[w] * (float(w) + 3.0)  ** 3.0

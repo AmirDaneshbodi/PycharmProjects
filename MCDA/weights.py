@@ -6,7 +6,7 @@ files = open('sensitivity.dat', 'w')
 out = open('statistics.dat', 'w')
 m = [[0.8, 0.3, 0.4], [0.7, 0.2, 0.7], [0.5, 0.3, 0.65], [0.3, 0.7, 0.2], [0.35, 0.5, 0.6]]
 dim = 5
-n = 10000.0
+n = 400.0
 n1 = int(n)
 counter = [[0.0 for y in range(dim)] for x in range(dim)]
 median = [0 for f in range(dim)]
@@ -36,7 +36,7 @@ def median_function(vector):
     else:
         return vector[len(vector) / 2]
 
-# best = [4 for f in range(dim)]
+# best = [4 for f in range(n_alt)]
 best = [99 for i in range(dim)]
 worst = [0 for i in range(dim)]
 vec = [[] for b in range(dim)]
@@ -49,7 +49,7 @@ for x in range(n1):
         w[2] = 1.0 - w[0] - w[1]
     for l in range(dim):
         q[l] = [a * b for a, b in zip(m[l], w)]
-        r[l] = sum(q[l]), l
+        r[l] = [sum(q[l]), l]
     r.sort(reverse=True)
 
     # Gives best and worst positions in ranking during all simulation.
@@ -89,7 +89,6 @@ print quartile25
 print quartile75
 print average
 print deviation
-
 
 print('1st place: Alt. 0 --> {0:.2f}%, Alt. 1 --> {1:.2f}%, Alt. 2 --> {2:.2f}%, Alt. 3 --> {3:.2f}%, Alt. 4 --> {4:.2f}%'.format(counter[0][0] * 100.0/n, counter[0][1] * 100.0/n, counter[0][2] * 100.0/n, counter[0][3] * 100.0/n, counter[0][4] * 100.0/n))
 print('2nd place: Alt. 0 --> {0:.2f}%, Alt. 1 --> {1:.2f}%, Alt. 2 --> {2:.2f}%, Alt. 3 --> {3:.2f}%, Alt. 4 --> {4:.2f}%'.format(counter[1][0] * 100.0/n, counter[1][1] * 100.0/n, counter[1][2] * 100.0/n, counter[1][3] * 100.0/n, counter[1][4] * 100.0/n))

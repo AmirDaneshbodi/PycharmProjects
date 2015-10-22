@@ -26,17 +26,18 @@ def pso_horns():
 
     windrose.close()
 
-    data = open('r1_layout_jensen.dat', 'w')
-    data2 = open('r1_random_layout_jensen.dat', 'w')
-    data3 = open('r1_best_global_fitness_jensen.dat', 'w', 1)
-    #r1 is run 1 np 50, nt 80, iter 2000.
-    #
-    #
-    #
+    data = open('r5_layout_jensen.dat', 'w')
+    data2 = open('r5_random_layout_jensen.dat', 'w')
+    data3 = open('r5_best_global_fitness_jensen.dat', 'w', 1)
+    # r1 is run 1 np 50, nt 80, iter 2000 wrong velocity. (*= random) discard
+    # r2 is test with np 50, nt 10, iter 2000. right velocity (*= - random) 2.7 s
+    # r3 np 25, nt 10 with iter 20000. 1.5 s
+    # r4 same as r3 with only one wind direction 0 deg.
+    # r5 same as r4 with wind direction 90 deg.
     #
     #
 
-    np = 50 ## Number of particles in swarm
+    np = 25 ## Number of particles in swarm
     nt = 80
     diam = 80.0
     particles = array([[[0.0, 0.0] for x in range(nt)] for x in range(np)])
@@ -51,9 +52,9 @@ def pso_horns():
         sign2 = - 1.0
 
     vel = array([[[sign1 * random(), sign2 * random()] for x in range(nt)] for x in range(np)])
-    best_local = array([[[0.0, 0.0] for x in range(nt)] for x in range(np)])
-    best_own_fitness = [0.0 for x in range(np)]
-    best_global_fitness = 0.0
+
+    best_own_fitness = [100.0 for x in range(np)]
+    best_global_fitness = 100.0
 
     def create():
         k = random()
@@ -73,15 +74,15 @@ def pso_horns():
             particles[n][tur] = create()
 
     best_layout = particles[0]
+    best_local = array(particles)
 
     # for i in range(nt):
     #     data.write('{2:d} {0:f} {1:f}\n'.format(best_layout[i][0], best_layout[i][1], i))
     # data.write('\n')
 
-    for ite in range(2000):
-
+    for ite in range(20000):
+    # while best_global_fitness > 0.001:
         start_time2 = time.time()
-
 
         for p in range(np):  # Can be parallelised in the future.
             ## Solving Constrained Nonlinear Optimization Problems with Particle Swarm Optimization by Xiaohui Hu and Russell Eberhart. For 1.49445 learning coefficients.
@@ -104,9 +105,9 @@ def pso_horns():
                     elif particles[p][t][0] > 5457.0 - particles[p][t][0] * 417.0 / 3907.0:
                         particles[p][t][0] = 2.0 * (5457.0 - particles[p][t][0] * 417.0 / 3907.0) - particles[p][t][0]
                         w = random()
-                vel[p][t] *= [w, j]
+                vel[p][t] *= [- w, - j]
 
-        # Find minimum distance between turbines, and if two are closer than 1D, then randomise one of them.
+        # Find minimum distance between turbines, and if two are closer than 1D, then randomise one of them. TODO Must be 2D if used with Ainslie model, since it does not guarantee any data before 2D.
         for b in range(np):
             pp = 0
             while pp == 0:
@@ -124,10 +125,10 @@ def pso_horns():
         fitness = Parallel(n_jobs=8)(delayed(fit)(particles[i], windrose_angle, windrose_speed, windrose_frequency) for i in range(np))
 
         for p in range(np):
-            if fitness[p] > best_own_fitness[p]:
+            if fitness[p] < best_own_fitness[p]:
                 best_own_fitness[p] = fitness[p]
                 best_local[p] = copy.deepcopy(particles[p])
-            if fitness[p] > best_global_fitness:
+            if fitness[p] < best_global_fitness:
                 best_global_fitness = fitness[p]
                 best_layout = copy.deepcopy(particles[p])
                 for i in range(nt):

@@ -95,7 +95,7 @@ try:
             result2.write('{0:f}\n'.format(fit[y][0]))
         result2.write('\n')
 
-        graded = [x[1] for x in sorted(fit, reverse=True)]
+        graded = [x[1] for x in sorted(fit)] # Took away reverse = True, because now we are minimising 100% - efficiency. We want the lowest values.
 
         retain_length = int(len(graded) * selection_percentage)
         parents_index = graded[:retain_length]

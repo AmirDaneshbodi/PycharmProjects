@@ -7,7 +7,7 @@ def larsen(a, windrose_angle, windrose_speed, windrose_frequency):
     import wake_geometry as wake
     from math import sqrt, log, tan, cos, pi
     from numpy import deg2rad
-    nt = 80  # Number of turbines
+    nt = len(a)  # Number of turbines
 
     summation = 0.0
 
@@ -95,4 +95,4 @@ def larsen(a, windrose_angle, windrose_speed, windrose_frequency):
         efficiency = profit * 100.0 / (float(nt) * power(U[distance[0][1]]))
         efficiency_proportion[wind] = efficiency * windrose_frequency[wind] / 100.0
         summation += efficiency_proportion[wind]
-    return summation
+    return 100.0 - summation

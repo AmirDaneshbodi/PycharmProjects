@@ -7,18 +7,54 @@ def jensen(a, windrose_angle, windrose_speed, windrose_frequency):
     from math import sqrt, log, tan, cos
     from numpy import deg2rad
 
-    nt = 80
+    nt = len(a)
     layout_x = [0.0 for x in range(nt)]
     layout_y = [0.0 for x in range(nt)]
     for x in range(nt):
         layout_x[x] = float(a[x][0])
         layout_y[x] = float(a[x][1])
 
+
+        # Ct curves.
+        # Polynomials 6th, 4th 3rd
+        # - 3.10224672352816e-5 * U0 ** 4.0 + 0.0021367624 * U0 ** 3.0 - 0.0495873986 * U0 ** 2.0 + 0.3976324804 * U0 - 0.1608576035
+        # 3.374593e-4 * U0 ** 3.0 - 0.0136412226 * U0 ** 2.0 + 0.1118003309 * U0 + 0.5782039288
+
+        # Ct look-up table for linear interpolation
+        # def thrust_table(v):
+            #     if v == 4: return 0.82
+            #     if v == 5: return 0.81
+            #     if v == 6: return 0.8
+            #     if v == 7: return 0.81
+            #     if v == 8: return 0.81
+            #     if v == 9: return 0.78
+            #     if v == 10: return 0.74
+            #     if v == 11: return 0.65
+            #     if v == 12: return 0.57
+            #     if v == 13: return 0.41
+            #     if v == 14: return 0.31
+            #     if v == 15: return 0.25
+            #     if v == 16: return 0.2
+            #     if v == 17: return 0.17
+            #     if v == 18: return 0.14
+            #     if v == 19: return 0.12
+            #     if v == 20: return 0.1
+            #     if v == 21: return 0.09
+            #     if v == 22: return 0.08
+            #     if v == 23: return 0.07
+            #     if v == 24: return 0.06
+            #     if v == 25: return 0.05
+
+        # 2 step thrust curve:
+        # 0.80 if U0 in 4 - 9 m/s
+        # 0.250625 if U0 in 10 - 25 m/s
+
+
     def Ct(U0):
         if U0 < 4.0:
             return 0.1
         elif U0 <= 25.0:
-            return 0.00000073139922126945 * U0 ** 6.0 - 0.0000668905596915255 * U0 ** 5.0 + 0.0023937885 * U0 ** 4.0 + - 0.0420283143 * U0 ** 3.0 + 0.3716111285 * U0 ** 2.0 - 1.5686969749 * U0 + 3.2991094727
+            return 7.3139922126945e-7 * U0 ** 6.0 - 6.68905596915255e-5 * U0 ** 5.0 + 2.3937885e-3 * U0 ** 4.0 + - 0.0420283143 * U0 ** 3.0 + 0.3716111285 * U0 ** 2.0 - 1.5686969749 * U0 + 3.2991094727
         else:
             return 0.0
 
@@ -26,9 +62,47 @@ def jensen(a, windrose_angle, windrose_speed, windrose_frequency):
         if U0 < 4.0:
             return 0.0
         elif U0 <= 25.0:
-            return 0.0003234808 * U0 ** 7.0 - 0.0331940121 * U0 ** 6.0 + 1.3883148012 * U0 ** 5.0 - 30.3162345004 * U0 ** 4.0 + 367.6835557011 * U0 ** 3.0 - 2441.6860655008 * U0 ** 2.0 + 8345.6777042343 * U0 - 11352.9366182805
+            return 3.234808e-4 * U0 ** 7.0 - 0.0331940121 * U0 ** 6.0 + 1.3883148012 * U0 ** 5.0 - 30.3162345004 * U0 ** 4.0 + 367.6835557011 * U0 ** 3.0 - 2441.6860655008 * U0 ** 2.0 + 8345.6777042343 * U0 - 11352.9366182805
         else:
             return 0.0
+
+            # Power curve polynomials.
+        # elif U0 <= 25.0
+            # - 0.0110778061 * U0 ** 5.0 + 0.8986075613 * U0 ** 4.0 - 27.2165513154 * U0 ** 3.0 + 368.8877606215 * U0 ** 2.0 - 1994.1905079276 * U0 + 3712.3986113386 #  5th degree
+            # - 0.5308414162 * U0 ** 3.0 - 15.4948143381 * U0 ** 2.0 + 13.1508234816 * U0  # 3rd degree
+
+        #  Interpolation
+            #table:
+    # def power_table(v):
+    #     if v == 4: return 66.3
+    #     if v == 5: return 152
+    #     if v == 6: return 280
+    #     if v == 7: return 457
+    #     if v == 8: return 690
+    #     if v == 9: return 978
+    #     if v == 10: return 1296
+    #     if v == 11: return 1598
+    #     if v == 12: return 1818
+    #     if v == 13: return 1935
+    #     if v == 14: return 1980
+    #     if v == 15: return 1995
+    #     if v == 16: return 1999
+    #     if v == 17: return 2000
+    #     if v == 18: return 2000
+    #     if v == 19: return 2000
+    #     if v == 20: return 2000
+    #     if v == 21: return 2000
+    #     if v == 22: return 2000
+    #     if v == 23: return 2000
+    #     if v == 24: return 2000
+    #     if v == 25: return 2000
+# interpolation function
+    # def interpolate(minx, miny, maxx, maxy, valx):
+        # return miny + (maxy - miny) * ((valx - minx) / (maxx - minx))
+
+        # 2 step Power curve
+        # 815.0333333 kw from 4 to 13 m/s, 2000 from 13-25 m/s
+
 
     # for U0 in range(4, 20):
     summation = 0.0
@@ -73,7 +147,8 @@ def jensen(a, windrose_angle, windrose_speed, windrose_frequency):
             profit += power(U[l])
         efficiency = profit * 100.0 / (float(nt) * power(U[distance[0][1]]))
         efficiency_proportion[wind] = efficiency * windrose_frequency[wind] / 100.0
+
         # print 'Farm efficiency with wind direction = {0:d} deg: {1:2.2f}%'.format(int(angle), efficiency)
         summation += efficiency_proportion[wind]
 
-    return summation
+    return 100.0 - summation

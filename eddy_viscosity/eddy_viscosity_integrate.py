@@ -1,4 +1,5 @@
-__author__ = 'sebasanper'
+__author__ = 'Sebastian Sanchez Perez Moreno' \
+             's.sanchezperezmoreno@tudelft.nl'
 
 from math import sqrt, exp, cos, pi
 import time
