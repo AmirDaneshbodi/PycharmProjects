@@ -12,8 +12,8 @@ thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
 for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
-        for withdata in [False]:  # Either measure execution time, or run once completely.
-            for rose in ['30', '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
+        for withdata in [True]:  # Either measure execution time, or run once completely.
+            for rose in ['360', '30']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 newpath = path.join('jensen_results/', powertype, thrusttype, rose)
 

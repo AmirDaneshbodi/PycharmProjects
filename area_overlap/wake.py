@@ -14,7 +14,7 @@ def wake_speed(U0, Ct, k, x, r0):
     return U0 * (1.0 - (1.0 - sqrt(1.0 - Ct))/(1.0 + (k * x)/r0) ** 2.0)
 
 def wake_deficit(Ct, k, x, r0):
-    return sqrt(1.0 - Ct)/(1.0 + (k * x)/r0) ** 2.0
+    return (1.0 - sqrt(1.0 - Ct))/(1.0 + (k * x)/r0) ** 2.0
 
 def partial_wake_deficit(Ct, k, x, r0, d):
     shadow_area = area.AreaReal(r0, wake_radius(r0, k, x), d)

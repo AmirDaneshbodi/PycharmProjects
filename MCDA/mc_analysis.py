@@ -20,7 +20,7 @@ for g in range(len(efficiency)):
     m.append([exe_time[g], efficiency[g]])
 n_alt = len(efficiency)
 dim = len(m)
-n = 1000.0  # MonteCarlo simulations
+n = 100.0  # MonteCarlo simulations
 n1 = int(n)
 counter = [[0.0 for y in range(n_alt)] for x in range(n_alt)]
 median = [0 for f in range(n_alt)]
@@ -58,8 +58,8 @@ vec = [[] for b in range(n_alt)]
  #  Here starts the Monte Carlo loop with n1 simulations.
 for x in range(n1):
     w = [0.0 for o in range(dim)]
-    w[1] = random() / 2.0 + 0.5
-    w[0] = 1.0 - w[1]
+    w[0] = random() / 2.0 + 0.5
+    w[1] = 1.0 - w[0]
     for l in range(n_alt):
         q[l] = [a * b for a, b in zip(m[l], w)]
         r[l] = [sum(q[l]), l]
