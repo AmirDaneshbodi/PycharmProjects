@@ -8,19 +8,19 @@ roses1 = ['30', '360']
 models = [1, 2, 3]
 powers = [1, 2, 3, 4]
 thrusts = [1, 2, 3, 4, 5]
-roses = [1, 2]
+roses = [2]#, 1]
 counter = 0
-output = open('statistics.gp', 'w')
+output = open('MCDA/statistics.gp', 'w')
 for model in models:
     for power in powers:
         for thrust in thrusts:
             for rose in roses:
                 if models1[model - 1] == 'area_overlap/jensen_results':
                     output.write('unset print; stats \'{0:s}/{1:s}/{2:s}/{3:s}/exe_time_jensen.dat\'\n'.format(models1[model - 1], powers1[power - 1], thrusts1[thrust - 1], roses1[rose - 1]))
-                    output.write('set print \'time_stats.dat\' append; print \'{4:d} {0:d} {1:d} {2:d} {3:d} \', STATS_min_y, STATS_mean_y, STATS_stddev_y\n'.format(model, power, thrust, rose, counter))
+                    output.write('set print \'time_stats.dat\' append; print \'{4:d} {0:d} {1:d} {2:d} {3:d} \', STATS_min, STATS_mean, STATS_stddev, 0\n'.format(model, power, thrust, rose, counter))
                 else:
                     output.write('unset print; stats \'{0:s}/{1:s}/{2:s}/{3:s}/exe_time.dat\'\n'.format(models1[model - 1], powers1[power - 1], thrusts1[thrust - 1], roses1[rose - 1]))
-                    output.write('set print \'time_stats.dat\' append; print \'{4:d} {0:d} {1:d} {2:d} {3:d} \', STATS_min_y, STATS_mean_y, STATS_stddev_y\n'.format(model, power, thrust, rose, counter))
+                    output.write('set print \'time_stats.dat\' append; print \'{4:d} {0:d} {1:d} {2:d} {3:d} \', STATS_min, STATS_mean, STATS_stddev, 1\n'.format(model, power, thrust, rose, counter))
                 counter += 1
 
 counter = 0
@@ -37,3 +37,7 @@ for model in models:
                 counter += 1
 efficiency.close()
 
+# from subprocess import call
+#
+# call(["rm", "MCDA"])
+# call(["gnuplot", "statistics.gp"])

@@ -67,7 +67,7 @@ def determine_if_in_wake(xt, yt, xw, yw, k, r0, alpha):  # According to Jensen M
 
 if __name__ == '__main__':
     jensen = open('jensen.dat', 'w')
-    U0 = 10.0
+    U0 = 8.5
     for i in range(1000):
         radius = wake_radius(40.0, 0.04, i * 0.02 * 80.0)
         for j in range(1000):

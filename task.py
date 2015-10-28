@@ -1,4 +1,26 @@
-__author__ = 'sebasanper'
-import area_overlap.jensen_precise2_horns
-import larsenEWTS2.larsen_precise2_horns
-import eddy_viscosity.ainslie_precise2_horns
+out = open('MCDA/gnu.gp', 'w')
+out.write('set term wxt size 800,800\n')
+out.write('set key rmargin\n')
+out.write('set xlabel \'Execution time criterion weight\'\n')
+out.write('set ylabel \'Accuracy criterion weight\'\n')
+out.write('set zlabel \'Detail\'\n')
+out.write('set size square\n')
+# out.write('set xrange[0:1]\n')
+# out.write('set yrange[0:1]\n')
+out2 = open('MCDA/gnu2.gp', 'w')
+out2.write('set term wxt size 800,800\n')
+out2.write('set key rmargin\n')
+out2.write('set xlabel \'Execution time criterion weight\'\n')
+out2.write('set ylabel \'Accuracy criterion weight\'\n')
+out2.write('set zlabel \'Detail\'\n')
+out2.write('set size square\n')
+out.write("plot \"<awk '{if($1==0){print $61,$63}}' TDA_ranks_weights.dat\" t '0'")
+for x in range(1, 60):  # Plots weights (time vs accuracy) per alternative for one particular ranking. Change $2== for desired ranking. and file
+    out.write(", \"<awk '{if($1=="+str(x)+"){print $61,$63}}' TDA_ranks_weights.dat\" t 'Alternative "+str(x)+"'")
+out.write('\npause -1')
+out2.write('plot ')
+for x in range(1, 61):  # Plots weights (time vs accuracy) per ranking of one particular alternative. Change ==30 for desired alternative. and file
+    out2.write("\"<awk '{if($"+str(x)+"==3){print $61,$63}}' TDA_ranks_weights.dat\" t 'Rank "+str(x)+"',")
+out2.write('\npause -1')
+out.close()
+out2.close()

@@ -6,14 +6,16 @@ from math import sqrt, log, tan, cos, pi, floor, ceil
 from numpy import deg2rad
 import time
 from os import makedirs, path, chdir
-powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
-thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
+# powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
+powers = ['power7']
+# thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
+thrusts = ['Ct6']
 
 for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
-        for withdata in [False]:  # Either measure execution time, or run once completely.
-            for rose in ['30', '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
+        for withdata in [True]:#False]  # Either measure execution time, or run once completely.
+            for rose in ['360']:#, '30']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 newpath = path.join('larsen_results/', powertype, thrusttype, rose)
 
@@ -54,9 +56,9 @@ for powertype in powers:  # Loop over power curves
                     makedirs(newpath)
                 chdir(newpath)
                 if withdata:
-                    turb_data = open('turb14_power.dat', 'w', 1)
-                    direction = open('direction_power.dat', 'w', 1)
-                    eff = open('efficiency.dat', 'w', 1)
+                    turb_data = open('85turb14_power.dat', 'w', 1)
+                    direction = open('85direction_power.dat', 'w', 1)
+                    eff = open('85efficiency.dat', 'w', 1)
                 if not withdata:
                     exe_time = open('exe_time.dat', 'w', 1)
 
@@ -234,10 +236,10 @@ for powertype in powers:  # Loop over power curves
                     # for wind in range(90, 91):
                         # if wind in [100, 133, 271, 280, 313]:
                         #     continue
-                        U1 = windrose_speed[wind]  # Free stream wind speed
-                        U0 = U1 * (70.0 / 10.0) ** 0.11 # Power or log law for wind shear profile
+                        # U1 = windrose_speed[wind]  # Free stream wind speed
+                        # U0 = U1 * (70.0 / 10.0) ** 0.11 # Power or log law for wind shear profile
                             # U0 = U1 * log(70.0 / 0.005) / log(10.0 / 0.005)
-                        # U0 = 8.5
+                        U0 = 8.5
                         angle = windrose_angle[wind]
                         angle3 = angle + 180.0
                         deficit_matrix = [[0.0 for x in range(nt)] for x in range(nt)]

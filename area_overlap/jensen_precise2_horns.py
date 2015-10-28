@@ -6,14 +6,16 @@ from math import sqrt, log, tan, cos, floor, ceil
 from numpy import deg2rad
 import time
 from os import makedirs, path, chdir
-powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
-thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
+# powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
+powers = ['power7']
+# thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
+thrusts = ['Ct6']
 
 for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
         for withdata in [True]:  # Either measure execution time, or run once completely.
-            for rose in ['360', '30']:  # Either run with 30 degrees, or 360 degrees wind roses.
+            for rose in ['360']:#, '30']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 newpath = path.join('jensen_results/', powertype, thrusttype, rose)
 
@@ -104,7 +106,7 @@ for powertype in powers:  # Loop over power curves
                     elif U0 <= 25.0:
                         return 7.3139922126945e-7 * U0 ** 6.0 - 6.68905596915255e-5 * U0 ** 5.0 + 2.3937885e-3 * U0 ** 4.0 + - 0.0420283143 * U0 ** 3.0 + 0.3716111285 * U0 ** 2.0 - 1.5686969749 * U0 + 3.2991094727
                     else:
-                        return 0.0
+                        return 0.1
 
                 def Ct4(U0):
                     if U0 < 4.0:

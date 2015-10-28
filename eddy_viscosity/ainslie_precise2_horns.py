@@ -7,14 +7,16 @@ from math import sqrt, log, cos, sin, tan, floor, ceil
 import time
 from numpy import deg2rad
 from os import makedirs, path, chdir
-powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
-thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
+# powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
+powers = ['power7']
+# thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
+thrusts = ['Ct6']
 
 for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
-        for withdata in [True, False]:  # Either measure execution time, or run once completely.
-            for rose in ['30', '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
+        for withdata in [True]:#, False]:  # Either measure execution time, or run once completely.
+            for rose in ['360']:#, '30']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 newpath = path.join('ainslie_results/', powertype, thrusttype, rose)
 
@@ -310,5 +312,7 @@ for powertype in powers:  # Loop over power curves
                         exe_time.write('{0:f}\n'.format(time.time() - start_time))
                     exe_time.close()
                 else:
+                    start_time = time.time()
                     eff.write('{0:f}'.format(analysis()))
+                    print time.time() - start_time
                     eff.close()
