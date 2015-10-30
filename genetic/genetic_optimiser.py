@@ -2,17 +2,32 @@ __author__ = 'sebasanper'
 import sys
 from math import ceil, floor, log
 from random import randint, random
-# from ainslieOKoptimise import ainslie as fitness
+from ainslieOKoptimise import ainslie as fitness
 # from larsenOKoptimise import larsen as fitness
-from jensenOKoptimise import jensen as fitness
+# from jensenOKoptimise import jensen as fitness
 from wake import distance
 import time
 from joblib import Parallel, delayed
 
-result = open('best_layout_jensen.dat', 'w', 1)
-result2 = open('fitness_jensen.dat', 'w', 1)
-average = open('average_fitness_jensen.dat', 'w', 1)
+result = open('gen3_best_layout_ainslie.dat', 'w', 1)
+result2 = open('gen3_fitness_ainslie.dat', 'w', 1)
+average = open('gen3_average_fitness_ainslie.dat', 'w', 1)
 start_time = time.time()
+
+# gen1 with     n_iter = 8000    n_ind = 100    mutation_rate = 0.01    selection_percentage = 0.3  random_selection = 0.05 100-13.24%=86.76% eff.
+# gen 2 same as gen1. Corrected min distance to 2D, instead of 1D. Changed to maximise efficiency instead. Using n_ind = 50 individuals for speed. 87.53% efficiency.
+
+windrose = open('horns_rev_windrose2.dat', 'r')
+windrose_angle = []
+windrose_speed = []
+windrose_frequency = []
+for line in windrose:
+    columns = line.split()
+    windrose_angle.append(float(columns[0]))
+    windrose_speed.append(float(columns[1]))
+    windrose_frequency.append(float(columns[2]))
+
+windrose.close()
 
 try:
     def gen_individual(n_turbines, min_x, max_x, min_y, max_y):
@@ -43,14 +58,14 @@ try:
             n = 1
             for i in range(nt):
                 for j in range(nt):
-                    if i != j and distance(a[i][0], a[i][1], a[j][0], a[j][1]) < diam:
+                    if i != j and distance(a[i][0], a[i][1], a[j][0], a[j][1]) < 2.0 * diam:
                         # print 'counting'
                         a[j] = gen_turbine(min_x, max_x, min_y, max_y)
                         n = 0
         return a
 
-    n_iter = 50
-    n_ind = 300
+    n_iter = 8000
+    n_ind = 50
     nt = 80
     diam = 80.0
     min_x = 0
@@ -58,7 +73,7 @@ try:
     min_y = 0
     max_y = 3907
     mutation_rate = 0.01
-    selection_percentage = 0.2
+    selection_percentage = 0.3
     random_selection = 0.05
 
     pops = gen_population(n_ind, nt, min_x, max_x, min_y, max_y)
@@ -75,11 +90,11 @@ try:
         # for x in range(nt):
         #     result.write('{0:d}\t{1:d}\n'.format(int(pop[0][x][0]), int(pop[0][x][1])))
         # result.write('\n')
-        pop = Parallel(n_jobs=8)(delayed(find_distance)(nt, pop[x], diam, min_x, max_x, min_y, max_y) for x in range(n_ind))  # Parallel verification of minimum distance between turbines to 1D
+        pop = Parallel(n_jobs=8)(delayed(find_distance)(nt, pop[x], diam, min_x, max_x, min_y, max_y) for x in range(n_ind))  # Parallel verification of minimum distance between turbines to 2D
         # for x in range(nt):
         #     result.write('{0:d}\t{1:d}\n'.format(int(pop[0][x][0]), int(pop[0][x][1])))
         # result.write('\n')
-        fit = Parallel(n_jobs=8)(delayed(fitness)(pop[i]) for i in range(n_ind))  # Parallel evaluation of fitness of all individuals
+        fit = Parallel(n_jobs=8)(delayed(fitness)(pop[i], windrose_angle, windrose_speed, windrose_frequency) for i in range(n_ind))  # Parallel evaluation of fitness of all individuals
 
         aver = grade_gen(fit, float(n_ind))
 
@@ -88,14 +103,14 @@ try:
         for i in range(n_ind):
             fit[i] = [fit[i], i]
         for x in range(nt):
-            result.write('{0:d}\t{1:d}\n'.format(int(pop[max(fit)[1]][x][0]), int(pop[max(fit)[1]][x][1])))
+            result.write('{0:d}\t{1:d}\n'.format(int(pop[max(fit)[1]][x][0]), int(pop[max(fit)[1]][x][1])))  # This max implies maximisation.
         result.write('\n')
 
         for y in range(n_ind):
             result2.write('{0:f}\n'.format(fit[y][0]))
         result2.write('\n')
 
-        graded = [x[1] for x in sorted(fit)] # Took away reverse = True, because now we are minimising 100% - efficiency. We want the lowest values.
+        graded = [x[1] for x in sorted(fit, reverse=True)]
 
         retain_length = int(len(graded) * selection_percentage)
         parents_index = graded[:retain_length]
@@ -131,6 +146,7 @@ try:
         pops.extend(children)
 
         print("%d iteration--- %s minutes ---" % (iteration, (time.time() - start_time2) / 60.0))
+        print len(pops)
     print("--- %s minutes ---" % ((time.time() - start_time) / 60.0))
     result.close()
     result2.close()

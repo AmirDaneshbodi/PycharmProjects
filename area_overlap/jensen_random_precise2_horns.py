@@ -6,16 +6,18 @@ from math import sqrt, log, tan, cos, floor, ceil
 from numpy import deg2rad
 import time
 from os import makedirs, path, chdir
+from random import random
+from wake import distance
 # powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
 powers = ['power7']
 # thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
-thrusts = ['Ct6']
+thrusts = ['Cttable', 'Ctstep']
 
 for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
-        for withdata in [True]:#, False]:  # Either measure execution time, or run once completely.
-            for rose in ['30']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
+        for withdata in [False]:  # Either measure execution time, or run once completely.
+            for rose in ['30', '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 newpath = path.join('jensen_results/', powertype, thrusttype, rose)
 
@@ -46,7 +48,6 @@ for powertype in powers:  # Loop over power curves
                         return Ctstep(U0)
 
                 chdir('/home/sebasanper/PycharmProjects/area_overlap')
-                layout = open('horns_rev.dat', 'r')
                 if rose == '360':
                     windrose = open('horns_rev_windrose2.dat', 'r')
                 elif rose == '30':
@@ -87,6 +88,7 @@ for powertype in powers:  # Loop over power curves
                     if v == 23: return 0.07
                     if v == 24: return 0.06
                     if v == 25: return 0.05
+                    if v > 25: return 0.01
 
                 def Cttable(U0):
                     return interpolate(floor(U0), Ct_table(floor(U0)), ceil(U0), Ct_table(ceil(U0)), U0)
@@ -151,7 +153,6 @@ for powertype in powers:  # Loop over power curves
 
                 def power_table(U0):
                     v = U0
-                    if v < 4: return 0.0
                     if v == 4: return 66.3
                     if v == 5: return 152.0
                     if v == 6: return 280.0
@@ -191,12 +192,21 @@ for powertype in powers:  # Loop over power curves
                     else:
                         return 0.0
 
-                layout_x = []
-                layout_y = []
-                for line in layout:
-                    columns = line.split()
-                    layout_x.append(float(columns[0]))
-                    layout_y.append(float(columns[1]))
+                # Enforce minimum distance 2D between all turbines for validity of wake model.
+                # pp = 0
+                # while pp == 0:
+                #     pp = 1
+                #     for i in range(nt):
+                #         for j in range(nt):
+                #             if i != j and distance(layout_x[i], layout_y[i], layout_x[j], layout_y[j]) < 2.0 * 80.0:
+                #                 k = random()
+                #                 if layout_x[j] <= 412.0:
+                #                     layout_y[j] = k * 3907.0 + (1.0 - k) * (- 3907.0 / 412.0 * layout_x[j] + 3907.0)
+                #                 elif layout_x[j] <= 5040.0:
+                #                     layout_y[j] = k * 3907.0
+                #                 else:
+                #                     layout_y[j] = k * (3907.0 / 417.0 * (- layout_x[j] + 5457.0))
+                #                 pp = 0
 
                 windrose_angle = []
                 windrose_speed = []
@@ -208,8 +218,24 @@ for powertype in powers:  # Loop over power curves
                     windrose_frequency.append(float(columns[2]))
 
                 def analysis():
-                    nt = len(layout_y)  # Number of turbines ## Length of layout list
-                    summation = 0.0
+
+                    # Random layout to test, since optimiser will always be dealing with random layouts.
+                    layout_x = []
+                    layout_y = []
+                    nt = 80
+                    for xx in range(nt):
+                        l = random()
+                        k = random()
+                        layout_x.append(5457.0 * l)
+                        if layout_x[-1] <= 412.0:
+                            layout_y.append(k * 3907.0 + (1.0 - k) * (- 3907.0 / 412.0 * layout_x[-1] + 3907.0))
+                        elif layout_x[-1] <= 5040.0:
+                            layout_y.append(k * 3907.0)
+                        else:
+                            layout_y.append(k * (3907.0 / 417.0 * (- layout_x[-1] + 5457.0)))
+
+                        nt = len(layout_y)  # Number of turbines ## Length of layout list
+                        summation = 0.0
 
                     def distance_to_front(x, y, theta, r): ## TODO: Calculate distance to any front and use negative distances to order.
                         theta = deg2rad(theta)

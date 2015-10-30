@@ -1,15 +1,15 @@
-__author__ = 'sebasanper'
+__author__ = 'Sebastian Sanchez Perez Moreno' \
+             's.sanchezperezmoreno@tudelft.nl'
 # Eddy Viscosity by Ainslie wake model applied to horns rev.
 # Vector a must be a wind farm layout. So size 80 x 2.
-def ainslie(a):
+def ainslie(a, windrose_angle, windrose_speed, windrose_frequency):
 
-    import wake
+    from wake import crosswind_distance
     from eddy_viscosity_integrate import ainslie
     from math import sqrt, log, cos, sin, tan
     from numpy import deg2rad
 
-    windrose = open('horns_rev_windrose2.dat', 'r')
-    nt = 80
+    nt = len(a)
     D = 80.0  # Diameter
     summation = 0.0
 
@@ -19,17 +19,6 @@ def ainslie(a):
         layout_x[x] = float(a[x][0] / D)
         layout_y[x] = float(a[x][1] / D)
 
-    windrose_angle = []
-    windrose_speed = []
-    windrose_frequency = []
-    for line in windrose:
-        columns = line.split()
-        windrose_angle.append(float(columns[0]))
-        windrose_speed.append(float(columns[1]))
-        windrose_frequency.append(float(columns[2]))
-
-    windrose.close()
-
     def determine_front(wind_angle, x_t1, y_t1, x_t2, y_t2):
         wind_angle = deg2rad(wind_angle)
         a = (x_t2 - x_t1) * cos(wind_angle) + (y_t2 - y_t1) * sin(wind_angle)
@@ -38,11 +27,11 @@ def ainslie(a):
         else:
             return 0.0
 
-    def power(U):
-        if U < 4.0:
-            return 0.1
-        elif U <= 25.0:
-            return 0.0003234808 * U ** 7.0 - 0.0331940121 * U ** 6.0 + 1.3883148012 * U ** 5.0 - 30.3162345004 * U ** 4.0 + 367.6835557011 * U ** 3.0 - 2441.6860655008 * U ** 2.0 + 8345.6777042343 * U - 11352.9366182805
+    def power(U0):
+        if U0 < 4.0:
+            return 0.0
+        elif U0 <= 25.0:
+            return - 0.5308414162 * U0 ** 3.0 + 15.4948143381 * U0 ** 2.0 + 13.1508234816 * U0
         else:
             return 0.0
 
@@ -50,7 +39,7 @@ def ainslie(a):
         if U0 < 4.0:
             return 0.1
         elif U0 <= 25.0:
-            return 0.00000073139922126945 * U0 ** 6.0 - 0.0000668905596915255 * U0 ** 5.0 + 0.0023937885 * U0 ** 4.0 + - 0.0420283143 * U0 ** 3.0 + 0.3716111285 * U0 ** 2.0 - 1.5686969749 * U0 + 3.2991094727
+            return 7.3139922126945e-7 * U0 ** 6.0 - 6.68905596915255e-5 * U0 ** 5.0 + 2.3937885e-3 * U0 ** 4.0 + - 0.0420283143 * U0 ** 3.0 + 0.3716111285 * U0 ** 2.0 - 1.5686969749 * U0 + 3.2991094727
         else:
             return 0.0
 
@@ -69,7 +58,7 @@ def ainslie(a):
         total_speed = [U0 for x in range(nt)]
 
         for tur in range(nt):
-            distance[tur] = [distance_to_front(layout_x[tur], layout_y[tur], angle, 100000000.0), tur]
+            distance[tur] = [distance_to_front(layout_x[tur], layout_y[tur], angle, 1000000000.0), tur]
         distance.sort()
 
         for turbine in range(nt):
@@ -81,7 +70,7 @@ def ainslie(a):
             perpendicular_distance = [0.0 for x in range(0, nt)]
             for i in range(turbine + 1, nt):
                 parallel_distance[distance[i][1]] = determine_front(angle3, layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
-                perpendicular_distance[distance[i][1]] = wake.crosswind_distance(deg2rad(angle3), layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
+                perpendicular_distance[distance[i][1]] = crosswind_distance(deg2rad(angle3), layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
                 if perpendicular_distance[distance[i][1]] <= 1.7 and parallel_distance[distance[i][1]] > 0.0 and perpendicular_distance[distance[i][1]] > 0.0: ## 1.7 gives same results as a bigger distance, many times faster.
                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = ainslie(Ct(total_speed[distance[turbine][1]]), total_speed[distance[turbine][1]], parallel_distance[distance[i][1]], perpendicular_distance[distance[i][1]])
                 else:
@@ -89,7 +78,7 @@ def ainslie(a):
 
         # Farm efficiency
         profit = 0.0
-        efficiency_proportion = [0.0 for x in range(0, len(windrose_frequency))]
+        efficiency_proportion = [0.0 for x in range(len(windrose_frequency))]
         efficiency = 0.0
         for l in range(nt):
             profit += power(total_speed[l])

@@ -1,11 +1,12 @@
 __author__ = 'Sebastian Sanchez Perez Moreno' \
              's.sanchezperezmoreno@tudelft.nl'
-# Jensen wake model with partial shadowing factor applied to horns rev. Must change Ct according to wind speed.
-import wake
-from math import sqrt, log, tan, cos, floor, ceil
+# Larsen wake model with partial shadowing factor applied to horns rev.
+import wake_geometry as wake
+from math import sqrt, log, tan, cos, pi, floor, ceil
 from numpy import deg2rad
 import time
 from os import makedirs, path, chdir
+from random import random
 # powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
 powers = ['power7']
 # thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
@@ -14,10 +15,10 @@ thrusts = ['Ct6']
 for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
-        for withdata in [True]:#, False]:  # Either measure execution time, or run once completely.
-            for rose in ['30']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
+        for withdata in [True]:#False]  # Either measure execution time, or run once completely.
+            for rose in ['360', '30']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
-                newpath = path.join('jensen_results/', powertype, thrusttype, rose)
+                newpath = path.join('larsen_results/', powertype, thrusttype, rose)
 
                 def power(U0):
                     #power7, power5, power3, powertable, powerstep
@@ -45,7 +46,7 @@ for powertype in powers:  # Loop over power curves
                     elif thrusttype == 'Ctstep':
                         return Ctstep(U0)
 
-                chdir('/home/sebasanper/PycharmProjects/area_overlap')
+                chdir('/home/sebasanper/PycharmProjects/larsenEWTS2')
                 layout = open('horns_rev.dat', 'r')
                 if rose == '360':
                     windrose = open('horns_rev_windrose2.dat', 'r')
@@ -107,7 +108,7 @@ for powertype in powers:  # Loop over power curves
                     elif U0 <= 25.0:
                         return 7.3139922126945e-7 * U0 ** 6.0 - 6.68905596915255e-5 * U0 ** 5.0 + 2.3937885e-3 * U0 ** 4.0 + - 0.0420283143 * U0 ** 3.0 + 0.3716111285 * U0 ** 2.0 - 1.5686969749 * U0 + 3.2991094727
                     else:
-                        return 0.1
+                        return 0.0
 
                 def Ct4(U0):
                     if U0 < 4.0:
@@ -191,13 +192,6 @@ for powertype in powers:  # Loop over power curves
                     else:
                         return 0.0
 
-                layout_x = []
-                layout_y = []
-                for line in layout:
-                    columns = line.split()
-                    layout_x.append(float(columns[0]))
-                    layout_y.append(float(columns[1]))
-
                 windrose_angle = []
                 windrose_speed = []
                 windrose_frequency = []
@@ -208,10 +202,43 @@ for powertype in powers:  # Loop over power curves
                     windrose_frequency.append(float(columns[2]))
 
                 def analysis():
-                    nt = len(layout_y)  # Number of turbines ## Length of layout list
-                    summation = 0.0
 
-                    def distance_to_front(x, y, theta, r): ## TODO: Calculate distance to any front and use negative distances to order.
+                    layout_x = []
+                    layout_y = []
+                    nt = 80
+                    for xx in range(nt):
+                        l = random()
+                        k = random()
+                        layout_x.append(5457.0 * l)
+                        if layout_x[-1] <= 412.0:
+                            layout_y.append(k * 3907.0 + (1.0 - k) * (- 3907.0 / 412.0 * layout_x[-1] + 3907.0))
+                        elif layout_x[-1] <= 5040.0:
+                            layout_y.append(k * 3907.0)
+                        else:
+                            layout_y.append(k * (3907.0 / 417.0 * (- layout_x[-1] + 5457.0)))
+
+                    # for U0 in range(4, 20):
+                    nt = len(layout_y)  # Number of turbines
+                    summation = 0.0
+                    r0 = 40.0  # Turbine rotor radius
+                    D = 2.0 * r0
+                    A = pi * r0 ** 2.0
+                    H = 70.0  # Hub height
+                    ia = 0.08  # Ambient turbulence intensity according to vanluvanee. 8% on average
+
+                    def deff(U0):
+                        return D * sqrt((1.0 + sqrt(1.0 - Ct(U0))) / (2.0 * sqrt(1.0 - Ct(U0))))
+
+                    rnb = max(1.08 * D, 1.08 * D + 21.7 * D * (ia - 0.05))
+                    r95 = 0.5 * (rnb + min(H, rnb))
+
+                    def x0(U0):
+                        return 9.5 * D / ((2.0 * r95 / deff(U0)) ** 3.0 - 1.0)
+
+                    def c1(U0):
+                        return (deff(U0) / 2.0) ** (5.0 / 2.0) * (105.0 / 2.0 / pi) ** (- 1.0 / 2.0) * (Ct(U0) * A * x0(U0)) ** (- 5.0 / 6.0)  # Prandtl mixing length
+
+                    def distance_to_front(x, y, theta, r):
                         theta = deg2rad(theta)
                         return abs(x + tan(theta) * y - r / cos(theta)) / sqrt(1.0 + tan(theta) ** 2.0)
 
@@ -219,16 +246,13 @@ for powertype in powers:  # Loop over power curves
                     # for wind in range(90, 91):
                         # if wind in [100, 133, 271, 280, 313]:
                         #     continue
-                        U1 = windrose_speed[wind]  # Free stream wind speed
-                        U0 = U1 * (70.0 / 10.0) ** 0.11 # Power or log law for wind shear profile
-                        # U0 = U1 * log(70.0 / 0.005) / log(10.0 / 0.005)
-                        # U0 = 8.5
-                        k = 0.04  # Decay constant
-                        r0 = 40.0  # Turbine rotor radius
+                        # U1 = windrose_speed[wind]  # Free stream wind speed
+                        # U0 = U1 * (70.0 / 10.0) ** 0.11 # Power or log law for wind shear profile
+                            # U0 = U1 * log(70.0 / 0.005) / log(10.0 / 0.005)
+                        U0 = 8.5
                         angle = windrose_angle[wind]
                         angle3 = angle + 180.0
                         deficit_matrix = [[0.0 for x in range(nt)] for x in range(nt)]
-                        proportion = [[0.0 for x in range(nt)] for x in range(nt)]
                         distance = [[0.0 for x in range(2)] for x in range(nt)]
 
                         U = [U0 for x in range(nt)]
@@ -243,10 +267,16 @@ for powertype in powers:  # Loop over power curves
                                 total_deficit[distance[turbine][1]] += deficit_matrix[distance[turbine][1]][distance[num][1]] ** 2.0
                             total_deficit[distance[turbine][1]] = sqrt(total_deficit[distance[turbine][1]])
                             U[distance[turbine][1]] = U0 * (1.0 - total_deficit[distance[turbine][1]])
+                            flag = [False for x in range(nt)]
+                            proportion = [0.0 for x in range(nt)]
+                            perpendicular_distance = [0.0 for x in range(nt)]
+                            parallel_distance = [0.0 for x in range(nt)]
                             for i in range(turbine + 1, nt):
-                                proportion[distance[turbine][1]][distance[i][1]] = wake.determine_if_in_wake(layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]], k, r0, angle3)
-                                # If statement for proportion = 0
-                                deficit_matrix[distance[i][1]][distance[turbine][1]] = proportion[distance[turbine][1]][distance[i][1]] * wake.wake_deficit(Ct(U[distance[turbine][1]]), k, wake.distance(layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]]), r0)
+                                proportion[distance[i][1]], flag[distance[i][1]], perpendicular_distance[distance[i][1]], parallel_distance[distance[i][1]] = wake.determine_if_in_wake(layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]], A, c1(U[distance[turbine][1]]), Ct(U[distance[turbine][1]]), angle3, r0, x0(U[distance[turbine][1]]))
+                                if parallel_distance[distance[i][1]] > 0.0: ## Add if proportion is 0, skip operation and deficit_matrix == 0.
+                                    deficit_matrix[distance[i][1]][distance[turbine][1]] = proportion[distance[i][1]] * wake.wake_deficit(U[distance[turbine][1]], Ct(U[distance[turbine][1]]), A, parallel_distance[distance[i][1]] + x0(U[distance[turbine][1]]), perpendicular_distance[distance[i][1]], c1(U[distance[turbine][1]]))
+                                else:
+                                    deficit_matrix[distance[i][1]][distance[turbine][1]] = 0.0
 
                         # for turb in range(nt):
                         #     for i in range(nt):
@@ -266,9 +296,8 @@ for powertype in powers:  # Loop over power curves
                         efficiency_proportion = [0.0 for x in range(0, len(windrose_frequency))]
                         for l in range(nt):
                             profit += power(U[l])
-                        efficiency = profit * 100.0 / (float(nt) * power(U[distance[0][1]])) # same as using U0
+                        efficiency = profit * 100.0 / (float(nt) * power(U[distance[0][1]]))
                         efficiency_proportion[wind] = efficiency * windrose_frequency[wind] / 100.0
-                        # print 'Farm efficiency with wind direction = {0:d} deg: {1:2.2f}%'.format(int(angle), efficiency)
                     # ---------------------------------------TODO UNCOMMENT ------------------------------------------
                         if withdata:
                             direction.write('{0:f} {1:f}\n'.format(angle, profit))
@@ -276,13 +305,12 @@ for powertype in powers:  # Loop over power curves
                     return summation
                     # for n in range(nt):
                     #     turb_data.write('{0:f}\n'.format(aver[n]))
-                # turb_data.close()
-                #     # output.close()
-                #     # output2.close()
-                #     # draw.close()
-                # direction.close()
-                # layout.close()
-                # windrose.close()
+
+                    # turb_data.close()
+                    # output.close()
+                    # output2.close()
+                    # draw.close()
+                    # direction.close()
                     # row.close()
                     # data.close()
 

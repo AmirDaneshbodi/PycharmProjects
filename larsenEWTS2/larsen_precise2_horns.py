@@ -64,6 +64,7 @@ for powertype in powers:  # Loop over power curves
 
                 def Ct_table(U0):
                     v = U0
+                    if v < 4: return 0.1
                     if v == 4: return 0.82
                     if v == 5: return 0.81
                     if v == 6: return 0.8
@@ -150,6 +151,7 @@ for powertype in powers:  # Loop over power curves
 
                 def power_table(U0):
                     v = U0
+                    if v < 4: return 0.0
                     if v == 4: return 66.3
                     if v == 5: return 152.0
                     if v == 6: return 280.0

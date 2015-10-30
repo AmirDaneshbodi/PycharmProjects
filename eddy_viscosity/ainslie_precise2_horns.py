@@ -1,7 +1,7 @@
 __author__ = 'Sebastian Sanchez Perez Moreno' \
              's.sanchezperezmoreno@tudelft.nl'
 # Eddy Viscosity wake model applied to horns rev.
-import wake
+from wake import crosswind_distance
 from eddy_viscosity_integrate import ainslie
 from math import sqrt, log, cos, sin, tan, floor, ceil
 import time
@@ -65,6 +65,7 @@ for powertype in powers:  # Loop over power curves
 
                 def Ct_table(U0):
                     v = U0
+                    if v < 4: return 0.1
                     if v == 4: return 0.82
                     if v == 5: return 0.81
                     if v == 6: return 0.8
@@ -151,6 +152,7 @@ for powertype in powers:  # Loop over power curves
 
                 def power_table(U0):
                     v = U0
+                    if v < 4: return 0.0
                     if v == 4: return 66.3
                     if v == 5: return 152.0
                     if v == 6: return 280.0
@@ -240,7 +242,7 @@ for powertype in powers:  # Loop over power curves
                         total_speed = [U0 for x in range(nt)]
 
                         for tur in range(nt):
-                            distance[tur] = [distance_to_front(layout_x[tur], layout_y[tur], angle, 100000000.0), tur]
+                            distance[tur] = [distance_to_front(layout_x[tur], layout_y[tur], angle, 1000000000.0), tur]
                         distance.sort()
 
                         for turbine in range(nt):
@@ -248,12 +250,12 @@ for powertype in powers:  # Loop over power curves
                                 total_deficit[distance[turbine][1]] += wake_deficit_matrix[distance[turbine][1]][distance[num][1]] ** 2.0
                             total_deficit[distance[turbine][1]] = sqrt(total_deficit[distance[turbine][1]])
                             total_speed[distance[turbine][1]] = U0 * (1.0 - total_deficit[distance[turbine][1]])
-                            parallel_distance = [0.0 for x in range(0, nt)]
-                            perpendicular_distance = [0.0 for x in range(0, nt)]
+                            parallel_distance = [0.0 for x in range(nt)]
+                            perpendicular_distance = [0.0 for x in range(nt)]
                             for i in range(turbine + 1, nt):
                                 parallel_distance[distance[i][1]] = determine_front(angle3, layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
-                                perpendicular_distance[distance[i][1]] = wake.crosswind_distance(deg2rad(angle3), layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
-                                if perpendicular_distance[distance[i][1]] <= 1.7: ## 1.7 gives same results as a bigger distance, many times faster.
+                                perpendicular_distance[distance[i][1]] = crosswind_distance(deg2rad(angle3), layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
+                                if perpendicular_distance[distance[i][1]] <= 1.7 and parallel_distance[distance[i][1]] > 0.0 and perpendicular_distance[distance[i][1]] > 0.0: ## 1.7 gives same results as a bigger distance, many times faster.
                                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = ainslie(Ct(total_speed[distance[turbine][1]]), total_speed[distance[turbine][1]], parallel_distance[distance[i][1]], perpendicular_distance[distance[i][1]])
                                 else:
                                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = 0.0
