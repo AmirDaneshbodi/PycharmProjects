@@ -1,9 +1,9 @@
 unset key
-set xrange [-2:2]
-set yrange [-1:3]
-plot 'rosenbrock.dat' every :::0::0 pt 7 lc rgb 'red'
+set xrange [-0.1:1.1]
+set yrange [-0.1:1.1]
+do for [i=1:10000:10]{
+plot 'ref1_random_layout_ainslie.dat' u 2:3 every :::i::i pt 7 lc rgb 'red'
+#plot 'iterations.dat' every :::i::i pt 7 lc rgb 'red'
 pause -1
-do for [i=1:1999]{
-plot 'rosenbrock.dat' every :::i::i pt 7 lc rgb 'red'
-pause 0.1
 }
+

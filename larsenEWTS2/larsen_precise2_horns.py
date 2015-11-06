@@ -56,9 +56,9 @@ for powertype in powers:  # Loop over power curves
                     makedirs(newpath)
                 chdir(newpath)
                 if withdata:
-                    turb_data = open('85turb14_power.dat', 'w', 1)
-                    direction = open('85direction_power.dat', 'w', 1)
-                    eff = open('85efficiency.dat', 'w', 1)
+                    turb_data = open('85ms_turb14_power.dat', 'w', 1)
+                    direction = open('85ms_direction_power.dat', 'w', 1)
+                    eff = open('85ms_efficiency.dat', 'w', 1)
                 if not withdata:
                     exe_time = open('exe_time.dat', 'w', 1)
 

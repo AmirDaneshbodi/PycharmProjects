@@ -71,7 +71,7 @@ def ainslie(a, windrose_angle, windrose_speed, windrose_frequency):
             for i in range(turbine + 1, nt):
                 parallel_distance[distance[i][1]] = determine_front(angle3, layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
                 perpendicular_distance[distance[i][1]] = crosswind_distance(deg2rad(angle3), layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
-                if perpendicular_distance[distance[i][1]] <= 1.7 and parallel_distance[distance[i][1]] > 0.0 and perpendicular_distance[distance[i][1]] > 0.0: ## 1.7 gives same results as a bigger distance, many times faster.
+                if perpendicular_distance[distance[i][1]] <= 1.7 and parallel_distance[distance[i][1]] > 0.0: ## 1.7 gives same results as a bigger distance, many times faster.
                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = ainslie(Ct(total_speed[distance[turbine][1]]), total_speed[distance[turbine][1]], parallel_distance[distance[i][1]], perpendicular_distance[distance[i][1]])
                 else:
                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = 0.0

@@ -8,7 +8,7 @@ import time
 from numpy import deg2rad
 from os import makedirs, path, chdir
 from random import random
-powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
+powers = ['power7', 'power5', 'power3', 'powertable']
 # powers = ['power7']
 thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
 # thrusts = ['Ct6']

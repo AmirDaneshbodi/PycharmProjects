@@ -1,4 +1,5 @@
-__author__ = 'sebasanper'
+__author__ = 'Sebastian Sanchez Perez-Moreno. Email: s.sanchezperezmoreno@tudelft.nl'
+
 import sys
 from math import ceil, floor, log
 from random import randint, random
@@ -9,13 +10,17 @@ from wake import distance
 import time
 from joblib import Parallel, delayed
 
-result = open('gen3_best_layout_ainslie.dat', 'w', 1)
-result2 = open('gen3_fitness_ainslie.dat', 'w', 1)
-average = open('gen3_average_fitness_ainslie.dat', 'w', 1)
+result = open('gen7_best_layout_ainslie.dat', 'w', 1)
+result2 = open('gen7_fitness_ainslie.dat', 'w', 1)
+average = open('gen7_average_fitness_ainslie.dat', 'w', 1)
 start_time = time.time()
 
-# gen1 with     n_iter = 8000    n_ind = 100    mutation_rate = 0.01    selection_percentage = 0.3  random_selection = 0.05 100-13.24%=86.76% eff.
-# gen 2 same as gen1. Corrected min distance to 2D, instead of 1D. Changed to maximise efficiency instead. Using n_ind = 50 individuals for speed. 87.53% efficiency.
+#  gen1 with     n_iter = 8000    n_ind = 100    mutation_rate = 0.01    selection_percentage = 0.3  random_selection = 0.05 100-13.24%=86.76% eff.
+#  gen 2 same as gen1. Corrected min distance to 2D, instead of 1D. Changed to maximise efficiency instead. Using n_ind = 50 individuals for speed. 87.53% efficiency.
+#  gen3     n_iter = 20    n_ind = 100. 2000 functions calls = 8 hrs.
+#  gen 5 same as gen 3 more iter to 50
+#  gen 6 windrose 360 degrees for speed. selection rate 0.2. each iteration took 10.69 minutes. 1069 minutes in total. too long.
+#  gen7 as gen6 with     n_iter = 50    n_ind = 80
 
 windrose = open('horns_rev_windrose2.dat', 'r')
 windrose_angle = []
@@ -64,8 +69,8 @@ try:
                         n = 0
         return a
 
-    n_iter = 8000
-    n_ind = 50
+    n_iter = 50
+    n_ind = 80
     nt = 80
     diam = 80.0
     min_x = 0
@@ -73,7 +78,7 @@ try:
     min_y = 0
     max_y = 3907
     mutation_rate = 0.01
-    selection_percentage = 0.3
+    selection_percentage = 0.2
     random_selection = 0.05
 
     pops = gen_population(n_ind, nt, min_x, max_x, min_y, max_y)
@@ -90,11 +95,11 @@ try:
         # for x in range(nt):
         #     result.write('{0:d}\t{1:d}\n'.format(int(pop[0][x][0]), int(pop[0][x][1])))
         # result.write('\n')
-        pop = Parallel(n_jobs=8)(delayed(find_distance)(nt, pop[x], diam, min_x, max_x, min_y, max_y) for x in range(n_ind))  # Parallel verification of minimum distance between turbines to 2D
+        pop = Parallel(n_jobs=-1)(delayed(find_distance)(nt, pop[x], diam, min_x, max_x, min_y, max_y) for x in range(n_ind))  # Parallel verification of minimum distance between turbines to 2D
         # for x in range(nt):
         #     result.write('{0:d}\t{1:d}\n'.format(int(pop[0][x][0]), int(pop[0][x][1])))
         # result.write('\n')
-        fit = Parallel(n_jobs=8)(delayed(fitness)(pop[i], windrose_angle, windrose_speed, windrose_frequency) for i in range(n_ind))  # Parallel evaluation of fitness of all individuals
+        fit = Parallel(n_jobs=-1)(delayed(fitness)(pop[i], windrose_angle, windrose_speed, windrose_frequency) for i in range(n_ind))  # Parallel evaluation of fitness of all individuals
 
         aver = grade_gen(fit, float(n_ind))
 

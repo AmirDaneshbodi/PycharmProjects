@@ -57,9 +57,9 @@ for powertype in powers:  # Loop over power curves
                     makedirs(newpath)
                 chdir(newpath)
                 if withdata:
-                    turb_data = open('turb14_power.dat', 'w', 1)
-                    direction = open('direction_power.dat', 'w', 1)
-                    eff = open('efficiency.dat', 'w', 1)
+                    turb_data = open('85ms_turb14_power.dat', 'w', 1)
+                    direction = open('85ms_direction_power.dat', 'w', 1)
+                    eff = open('85ms_efficiency.dat', 'w', 1)
                 if not withdata:
                     exe_time = open('exe_time.dat', 'w', 1)
 
@@ -230,10 +230,10 @@ for powertype in powers:  # Loop over power curves
                     for wind in range(0, len(windrose_angle)):
                         # print wind
                     # for wind in range(0, 1):
-                        U1 = windrose_speed[wind]  # Free stream wind speed
-                        U0 = U1 * (70.0 / 10.0) ** 0.11  # Power or log law for wind shear profile
+                    #     U1 = windrose_speed[wind]  # Free stream wind speed
+                    #     U0 = U1 * (70.0 / 10.0) ** 0.11  # Power or log law for wind shear profile
                         # U0 = U1 * log(70.0 / 0.005) / log(10.0 / 0.005)
-                        # U0 = 8.5
+                        U0 = 8.5
                         angle = windrose_angle[wind]
                         angle3 = angle + 180.0
                         wake_deficit_matrix = [[0.0 for x in range(nt)] for x in range(nt)]
@@ -255,7 +255,7 @@ for powertype in powers:  # Loop over power curves
                             for i in range(turbine + 1, nt):
                                 parallel_distance[distance[i][1]] = determine_front(angle3, layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
                                 perpendicular_distance[distance[i][1]] = crosswind_distance(deg2rad(angle3), layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]])
-                                if perpendicular_distance[distance[i][1]] <= 1.7 and parallel_distance[distance[i][1]] > 0.0 and perpendicular_distance[distance[i][1]] > 0.0: ## 1.7 gives same results as a bigger distance, many times faster.
+                                if perpendicular_distance[distance[i][1]] <= 1.7 and parallel_distance[distance[i][1]] > 0.0: ## 1.7 gives same results as a bigger distance, many times faster.
                                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = ainslie(Ct(total_speed[distance[turbine][1]]), total_speed[distance[turbine][1]], parallel_distance[distance[i][1]], perpendicular_distance[distance[i][1]])
                                 else:
                                     wake_deficit_matrix[distance[i][1]][distance[turbine][1]] = 0.0
@@ -294,7 +294,7 @@ for powertype in powers:  # Loop over power curves
                         if withdata:
                             direction.write('{0:f} {1:f}\n'.format(angle, profit))
                         summation += efficiency_proportion[wind]
-                    return summation
+                    print 100.0 - summation
                     # for n in range(nt):
                         # turb_data.write('{0:f}\n'.format(aver[n]))
                         # print U0, summation

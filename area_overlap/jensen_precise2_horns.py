@@ -15,7 +15,7 @@ for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
         for withdata in [True]:#, False]:  # Either measure execution time, or run once completely.
-            for rose in ['30']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
+            for rose in ['360']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 newpath = path.join('jensen_results/', powertype, thrusttype, rose)
 
@@ -56,11 +56,11 @@ for powertype in powers:  # Loop over power curves
                     makedirs(newpath)
                 chdir(newpath)
                 if withdata:
-                    turb_data = open('random_turb14_power.dat', 'w', 1)
-                    direction = open('random_direction_power.dat', 'w', 1)
-                    eff = open('random_efficiency.dat', 'w', 1)
+                    turb_data = open('85ms_turb14_power.dat', 'w', 1)
+                    direction = open('85ms_direction_power.dat', 'w', 1)
+                    eff = open('85ms_efficiency.dat', 'w', 1)
                 if not withdata:
-                    exe_time = open('random_exe_time.dat', 'w', 1)
+                    exe_time = open('exe_time.dat', 'w', 1)
 
                 def Ct_table(U0):
                     v = U0
@@ -219,10 +219,10 @@ for powertype in powers:  # Loop over power curves
                     # for wind in range(90, 91):
                         # if wind in [100, 133, 271, 280, 313]:
                         #     continue
-                        U1 = windrose_speed[wind]  # Free stream wind speed
-                        U0 = U1 * (70.0 / 10.0) ** 0.11 # Power or log law for wind shear profile
+                        # U1 = windrose_speed[wind]  # Free stream wind speed
+                        # U0 = U1 * (70.0 / 10.0) ** 0.11 # Power or log law for wind shear profile
                         # U0 = U1 * log(70.0 / 0.005) / log(10.0 / 0.005)
-                        # U0 = 8.5
+                        U0 = 8.5
                         k = 0.04  # Decay constant
                         r0 = 40.0  # Turbine rotor radius
                         angle = windrose_angle[wind]

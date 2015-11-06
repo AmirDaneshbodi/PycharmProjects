@@ -7,16 +7,16 @@ from numpy import deg2rad
 import time
 from os import makedirs, path, chdir
 from random import random
-# powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
-powers = ['power7']
-# thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
-thrusts = ['Ct6']
+powers = ['power7', 'power5', 'power3', 'powertable']
+# powers = ['power7']
+thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
+# thrusts = ['Ct6']
 
 for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
-        for withdata in [True]:#False]  # Either measure execution time, or run once completely.
-            for rose in ['360', '30']:  # Either run with 30 degrees, or 360 degrees wind roses.
+        for withdata in [False]:  # Either measure execution time, or run once completely.
+            for rose in ['360']:#, '30']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 newpath = path.join('larsen_results/', powertype, thrusttype, rose)
 
