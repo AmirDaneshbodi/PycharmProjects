@@ -6,9 +6,9 @@ import copy
 from math import sqrt
 from numpy import array
 from joblib import Parallel, delayed
-# from jensenOKoptimise import jensen as fit
-from ainslieOKoptimise import ainslie as fit
-# from larsenOKoptimise import larsen as fitW
+from jensenOKoptimise import jensen as fit
+#from ainslieOKoptimise import ainslie as fit
+# from larsenOKoptimise import larsen as fit
 import time
 
 

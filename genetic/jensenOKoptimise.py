@@ -2,28 +2,17 @@ __author__ = 'Sebastian Sanchez Perez Moreno' \
              's.sanchezperezmoreno@tudelft.nl'
 # Jensen wake model with partial shadowing factor applied to horns rev. Must change Ct according to wind speed.
 # Vector a must be a wind farm layout. So size 80 x 2.
-def jensen(a):
+def jensen(a, windrose_angle, windrose_speed, windrose_frequency):
     import wake
     from math import sqrt, log, tan, cos
     from numpy import deg2rad
 
-    windrose = open('horns_rev_windrose2.dat', 'r')
-    nt = 80
+    nt = len(a)
     layout_x = [0.0 for x in range(nt)]
     layout_y = [0.0 for x in range(nt)]
     for x in range(nt):
         layout_x[x] = float(a[x][0])
         layout_y[x] = float(a[x][1])
-    windrose_angle = []
-    windrose_speed = []
-    windrose_frequency = []
-    for line in windrose:
-        columns = line.split()
-        windrose_angle.append(float(columns[0]))
-        windrose_speed.append(float(columns[1]))
-        windrose_frequency.append(float(columns[2]))
-
-    windrose.close()
 
     def Ct(U0):
         if U0 < 4.0:

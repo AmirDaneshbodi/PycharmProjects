@@ -15,9 +15,10 @@ for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
         for withdata in [True]:#, False]:  # Either measure execution time, or run once completely.
-            for rose in ['360']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
+            for rose in ['30']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
-                newpath = path.join('jensen_results/', powertype, thrusttype, rose)
+                # newpath = path.join('jensen_results/', powertype, thrusttype, rose)
+                newpath = path.join('Caca/', powertype, thrusttype, rose)
 
                 def power(U0):
                     #power7, power5, power3, powertable, powerstep
@@ -56,9 +57,9 @@ for powertype in powers:  # Loop over power curves
                     makedirs(newpath)
                 chdir(newpath)
                 if withdata:
-                    turb_data = open('85ms_turb14_power.dat', 'w', 1)
-                    direction = open('85ms_direction_power.dat', 'w', 1)
-                    eff = open('85ms_efficiency.dat', 'w', 1)
+                    turb_data = open('8p5ms_turb1_power.dat', 'w', 1)
+                    direction = open('8p5ms_direction_power.dat', 'w', 1)
+                    eff = open('8p5ms_efficiency.dat', 'w', 1)
                 if not withdata:
                     exe_time = open('exe_time.dat', 'w', 1)
 
@@ -215,7 +216,7 @@ for powertype in powers:  # Loop over power curves
                         theta = deg2rad(theta)
                         return abs(x + tan(theta) * y - r / cos(theta)) / sqrt(1.0 + tan(theta) ** 2.0)
 
-                    for wind in range(0, len(windrose_angle)):
+                    for wind in range(len(windrose_angle)):
                     # for wind in range(90, 91):
                         # if wind in [100, 133, 271, 280, 313]:
                         #     continue
@@ -259,7 +260,7 @@ for powertype in powers:  # Loop over power curves
                         #     aver[n] += power(U[n]) / 360.0
                         # ---------------------------------------TODO UNCOMMENT -----------------------------------------
                         if withdata:
-                            turb_data.write('{0:f} {1:f}\n'.format(angle, power(U[14])))
+                            turb_data.write('{0:f} {1:f}\n'.format(angle, power(U[0])))
 
                         # Farm efficiency
                         profit = 0.0

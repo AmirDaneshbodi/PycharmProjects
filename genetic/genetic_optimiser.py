@@ -3,9 +3,9 @@ __author__ = 'Sebastian Sanchez Perez-Moreno. Email: s.sanchezperezmoreno@tudelf
 import sys
 from math import ceil, floor, log
 from random import randint, random
-from ainslieOKoptimise import ainslie as fitness
+# from ainslieOKoptimise import ainslie as fitness
 # from larsenOKoptimise import larsen as fitness
-# from jensenOKoptimise import jensen as fitness
+from jensenOKoptimise import jensen as fitness
 from wake import distance
 import time
 from joblib import Parallel, delayed
@@ -99,7 +99,8 @@ try:
         # for x in range(nt):
         #     result.write('{0:d}\t{1:d}\n'.format(int(pop[0][x][0]), int(pop[0][x][1])))
         # result.write('\n')
-        fit = Parallel(n_jobs=-1)(delayed(fitness)(pop[i], windrose_angle, windrose_speed, windrose_frequency) for i in range(n_ind))  # Parallel evaluation of fitness of all individuals
+        # Calls the Wake Model
+        fit = Parallel(n_jobs=-1)(delayed(fitness)(pop[i]) for i in range(n_ind))  # Parallel evaluation of fitness of all individuals
 
         aver = grade_gen(fit, float(n_ind))
 

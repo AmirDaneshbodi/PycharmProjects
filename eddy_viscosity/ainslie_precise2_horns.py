@@ -8,7 +8,7 @@ import time
 from numpy import deg2rad
 from os import makedirs, path, chdir
 # powers = ['power7', 'power5', 'power3', 'powertable', 'powerstep']
-powers = ['power7']
+powers = ['power3']
 # thrusts = ['Ct6', 'Ct4', 'Ct3', 'Cttable', 'Ctstep']
 thrusts = ['Ct6']
 
@@ -47,7 +47,7 @@ for powertype in powers:  # Loop over power curves
                         return Ctstep(U0)
 
                 chdir('/home/sebasanper/PycharmProjects/eddy_viscosity')
-                layout = open('horns_rev.dat', 'r')
+                layout = open('last_good.dat', 'r')
                 if rose == '360':
                     windrose = open('horns_rev_windrose2.dat', 'r')
                 elif rose == '30':
@@ -57,9 +57,9 @@ for powertype in powers:  # Loop over power curves
                     makedirs(newpath)
                 chdir(newpath)
                 if withdata:
-                    turb_data = open('85ms_turb14_power.dat', 'w', 1)
-                    direction = open('85ms_direction_power.dat', 'w', 1)
-                    eff = open('85ms_efficiency.dat', 'w', 1)
+                    turb_data = open('opt_turb14_power.dat', 'w', 1)
+                    direction = open('opt_direction_power.dat', 'w', 1)
+                    eff = open('opt_efficiency.dat', 'w', 1)
                 if not withdata:
                     exe_time = open('exe_time.dat', 'w', 1)
 
@@ -230,10 +230,10 @@ for powertype in powers:  # Loop over power curves
                     for wind in range(0, len(windrose_angle)):
                         # print wind
                     # for wind in range(0, 1):
-                    #     U1 = windrose_speed[wind]  # Free stream wind speed
-                    #     U0 = U1 * (70.0 / 10.0) ** 0.11  # Power or log law for wind shear profile
+                        U1 = windrose_speed[wind]  # Free stream wind speed
+                        U0 = U1 * (70.0 / 10.0) ** 0.11  # Power or log law for wind shear profile
                         # U0 = U1 * log(70.0 / 0.005) / log(10.0 / 0.005)
-                        U0 = 8.5
+                        # U0 = 8.5
                         angle = windrose_angle[wind]
                         angle3 = angle + 180.0
                         wake_deficit_matrix = [[0.0 for x in range(nt)] for x in range(nt)]
@@ -294,7 +294,7 @@ for powertype in powers:  # Loop over power curves
                         if withdata:
                             direction.write('{0:f} {1:f}\n'.format(angle, profit))
                         summation += efficiency_proportion[wind]
-                    print 100.0 - summation
+                    print summation
                     # for n in range(nt):
                         # turb_data.write('{0:f}\n'.format(aver[n]))
                         # print U0, summation

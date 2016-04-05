@@ -13,5 +13,5 @@ bin_number(x) = floor(x/bin_width)
 
 rounded(x) = bin_width * (bin_number(x))
 
-plot 'weights_sensitivity.dat' using (rounded($1)):(1): smooth frequency w labels
+plot 'dummy.dat' using (rounded($1)) smooth frequency
 pause -1
