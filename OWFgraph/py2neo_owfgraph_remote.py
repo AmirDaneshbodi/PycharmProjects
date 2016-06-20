@@ -1,18 +1,14 @@
 __author__ = 'Sebastian Sanchez Perez-Moreno. Email: s.sanchezperezmoreno@tudelft.nl'
-from py2neo_functions import add_node, add_relationship, add_property, del_relationship, del_node, change_relationship
+from py2neo_functions import create_property, create_node, create_relationship, delete_relationship, delete_node, change_relationship, find, change_label, neighbours, change_property
 from py2neo import Graph
 owfgraph = Graph("http://neo4j:kluyverwegwind@owfgraph.lr.tudelft.nl:7474/db/data/")
 exe = owfgraph.cypher.execute
 
-query = "match (m:)--(v) return v.name"
+avail = {'label': 'attribute',
 
-# print exe(query)
+             'name': 'human activities on site',
 
-turbulence = {'label': 'attribute',
-
-             'name': 'turbulence',
-
-             'description': 'concept of turbulence in the atmosphere',
+             'description': 'human activities on the site.',
 
              'author': 'sebastian',
 
@@ -28,36 +24,27 @@ turbulence = {'label': 'attribute',
 
              'note': ''}
 
-wind_direction = {'label': 'attribute',
+# find('radius')
 
-             'name': 'wind direction',
+# change_label('site', 'Attribute', 'Object')
 
-             'description': 'concept of the direction of wind',
+# change_relationship('attribute', 'availability', 'specifies', 'part_of', 'object', 'environment')
 
-             'author': 'sebastian',
+# create_node(distance)
 
-             'unit': '',
+# del_relationship('variable', 'distance to coast', 'describes', 'object', 'site')
 
-             'domain': '',
+# delete_node('attribute', 'name')
 
-             'value': '',
+# create_relationship('variable', 'distance to coast', 'describes', 'attribute', 'geographic location of site')
 
-             'expression': '',
+# create_node(avail)
 
-             'reference': '',
+# create_property('attribute', 'availability', 'name', 'availability of OWF')
 
-             'note': ''}
+# change_property('attribute', 'availability', 'name', 'availability of OWF')
 
-# add_node(turbulence)
-# add_node(wind_direction)
 
-# change_relationship('attribute', 'ocean currents', 'describes', 'specifies', 'object', 'ocean')
+# del_node('object', 'foundation')
 
-# del_relationship('variable', 'turbulence intensity', 'describes', 'object', 'atmosphere')
-# del_relationship('variable', 'wind direction', 'example', 'object', 'atmosphere')
-
-# add_relationship('variable', 'turbulence intensity', 'describes', 'attribute', 'turbulence')
-# add_relationship('attribute', 'wind direction', 'specifies', 'object', 'atmosphe
-
-# del_node('attribute', 'wind direction')
-
+# neighbours('attribute', 'availability of owf')

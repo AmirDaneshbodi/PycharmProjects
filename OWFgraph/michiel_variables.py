@@ -18,11 +18,11 @@ owfgraph=Graph("http://neo4j:neo4j@localhost:7474/db/data/")
 
 exe = owfgraph.cypher.execute
 
-model_number = 'm111'
+model_number = 'm124'
 
-model_desc = 'expected number of mobilisations of lifting equipment for n repairs'
+model_desc = 'total time that lifting equipment is in the farm per year (excluding the mobilisation times)'
 
-var_names = ['']
+var_names = ['total time that lifting equipment is in the wind farm per year', 'average work in progress time for lifting activities', '(economic) lifetime of wind farm', 'number of failures of type j']
 
 # exe("create (v:Variable{author:'sebastian', name:'" + model_desc[0] + "'})")
 exe("match (m:Model{name:'" + model_number + "'}) set m.description='" + model_desc + "'")

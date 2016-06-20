@@ -76,3 +76,51 @@ def jensen(a, windrose_angle, windrose_speed, windrose_frequency):
         summation += efficiency_proportion[wind]
 
     return summation
+
+if __name__ == '__main__':
+
+    import matplotlib.pyplot as plt
+    from matplotlib.path import Path
+    import matplotlib.patches as patches
+    from placement_maxdistance.placement_turbines2 import place_turbines
+
+    windrose = open('horns_rev_windrose.dat', 'r')
+    windrose_angle = []
+    windrose_speed = []
+    windrose_frequency = []
+
+    for line in windrose:
+        columns = line.split()
+        windrose_angle.append(float(columns[0]))
+        windrose_speed.append(float(columns[1]))
+        windrose_frequency.append(float(columns[2]))
+
+    windrose.close()
+    points = place_turbines()
+    print jensen(points, windrose_angle, windrose_frequency, windrose_frequency)
+
+    verts = [(424386., 6147543.),
+             (423974., 6151447.),
+             (429014., 6151447.),
+             (429431., 6147543.),
+             (424386., 6147543.)
+             ]
+
+    codes = [Path.MOVETO,
+             Path.LINETO,
+             Path.LINETO,
+             Path.LINETO,
+             Path.CLOSEPOLY,
+             ]
+
+    path = Path(verts, codes)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    patch = patches.PathPatch(path, facecolor='orange', lw=2)
+    ax.add_patch(patch)
+    ax.set_xlim(423870, 429531)
+    ax.set_ylim(6147440, 6151547)
+    toplot_x, toplot_y = zip(*points)
+    plt.plot(toplot_x, toplot_y, 'ro')
+    plt.show()

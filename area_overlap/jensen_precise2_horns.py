@@ -15,10 +15,10 @@ for powertype in powers:  # Loop over power curves
     for thrusttype in thrusts:  # Loop over thrust curves
         print powertype, thrusttype
         for withdata in [True]:#, False]:  # Either measure execution time, or run once completely.
-            for rose in ['30']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
+            for rose in ['360']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 # newpath = path.join('jensen_results/', powertype, thrusttype, rose)
-                newpath = path.join('Caca/', powertype, thrusttype, rose)
+                newpath = path.join('weird/', powertype, thrusttype, rose)
 
                 def power(U0):
                     #power7, power5, power3, powertable, powerstep
@@ -245,9 +245,10 @@ for powertype in powers:  # Loop over power curves
                             total_deficit[distance[turbine][1]] = sqrt(total_deficit[distance[turbine][1]])
                             U[distance[turbine][1]] = U0 * (1.0 - total_deficit[distance[turbine][1]])
                             for i in range(turbine + 1, nt):
-                                proportion[distance[turbine][1]][distance[i][1]] = wake.determine_if_in_wake(layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]], k, r0, angle3)
+                                determ = wake.determine_if_in_wake(layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]], k, r0, angle3)
+                                proportion[distance[turbine][1]][distance[i][1]] = determ[0]
                                 # If statement for proportion = 0
-                                deficit_matrix[distance[i][1]][distance[turbine][1]] = proportion[distance[turbine][1]][distance[i][1]] * wake.wake_deficit(Ct(U[distance[turbine][1]]), k, wake.distance(layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]]), r0)
+                                deficit_matrix[distance[i][1]][distance[turbine][1]] = proportion[distance[turbine][1]][distance[i][1]] * wake.wake_deficit(Ct(U[distance[turbine][1]]), k, determ[1], r0)
 
                         # for turb in range(nt):
                         #     for i in range(nt):
@@ -260,7 +261,7 @@ for powertype in powers:  # Loop over power curves
                         #     aver[n] += power(U[n]) / 360.0
                         # ---------------------------------------TODO UNCOMMENT -----------------------------------------
                         if withdata:
-                            turb_data.write('{0:f} {1:f}\n'.format(angle, power(U[0])))
+                            turb_data.write('{0:f} {1:f}\n'.format(angle, power(U[14])))
 
                         # Farm efficiency
                         profit = 0.0

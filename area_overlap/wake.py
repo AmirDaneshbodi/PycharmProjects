@@ -50,19 +50,19 @@ def determine_if_in_wake(xt, yt, xw, yw, k, r0, alpha):  # According to Jensen M
         if abs(radius) >= abs(distance_to_centre):
             if abs(radius) >= abs(distance_to_centre) + r0:
                 fraction = 1.0
-                return fraction
+                return fraction, distance_to_turbine
             elif abs(radius) < abs(distance_to_centre) + r0:
                 fraction = area.AreaReal(r0, radius, distance_to_centre).area()
-                return fraction
+                return fraction, distance_to_turbine
         elif abs(radius) < abs(distance_to_centre):
             if abs(radius) <= abs(distance_to_centre) - r0:
-                fraction = 0.0
+                fraction = 0.0, distance_to_turbine
                 return fraction
             elif abs(radius) > abs(distance_to_centre) - r0:
                 fraction = area.AreaReal(r0, radius, distance_to_centre).area()
-                return fraction
+                return fraction, distance_to_turbine
     else:
-        return 0.0
+        return 0.0, distance_to_turbine
 
 
 if __name__ == '__main__':

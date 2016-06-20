@@ -648,7 +648,89 @@ model_desc = 'total number of failures that require lifting equipment'
 
 var_names = ['number of failures that require lifting equipment', 'number of failures of type j during steady state', 'number of storms during lifetime of wind farm', 'number of failures of type j during storm and catch-up period']
 
+model_number = 'm111'
 
+model_desc = 'expected number of mobilisations of lifting equipment for n repairs'
+
+var_names = ['number of mobilisations of lifting equipment for n repairs', 'number of failures that require lifting equipment', 'probability of mobilising hoisting equipment for n repairs']
+
+model_number = 'm112'
+
+model_desc = 'downtime due to waiting for lifting equipment'
+
+var_names = ['downtime due to waiting for lifting equipment', 'downtime due to waiting for lifting equipment to do n repairs', 'number of mobilisations of lifting equipment for n repairs', 'waiting time before ordering lifting equipment', 'time needed for mobilising lifting equipment', 'average work in progress time for lifting activities']
+
+model_number = 'm113'
+
+model_desc = 'time to perform preventive maintenance once'
+
+var_names = ['work in progress time per preventive maintenance action', 'time in a day', 'number of shifts per day', 'working hours per preventive maintenance action', 'travel time in wind farm', 'efficiency of crew deployment', 'shift duration', 'travel time to and from wind farm']
+
+model_number = 'm114'
+
+model_desc = 'total number of preventive maintenance actions during the lifetime'
+
+var_names = ['number of preventive maintenance actions', 'number of turbines in farm', '(economic) lifetime of wind farm', 'average interval in which service is required per turbine']
+
+model_number = 'm115'
+
+model_desc = 'time needed to perform all preventive maintenance'
+
+var_names = ['number of preventive maintenance actions', 'work in progress time of all preventive maintenance actions', 'work in progress time per preventive maintenance action']
+
+model_number = 'm116'
+
+model_desc = 'condition that needs to be met in order to have enough crew for preventive maintenance'
+
+var_names = ['work in progress time of all preventive maintenance actions', 'number of crews per shift', 'total steady state time', 'number of failures of type j during steady state', 'time of work in progress for repair of failure of type j']
+
+model_number = 'm117'
+
+model_desc = 'downtime during preventive maintenance'
+
+var_names = ['number of preventive maintenance actions', 'downtime during preventive maintenance', 'working hours per preventive maintenance action']
+
+model_number = 'm118'
+
+model_desc = 'total number of failures of type j'
+
+var_names = ['number of failures of type j', 'number of failures of type j during steady state', 'number of storms during lifetime of wind farm', 'number of failures of type j during storm and catch-up period']
+
+model_number = 'm119'
+
+model_desc = 'total downtime assigned to failures of type j'
+
+var_names = ['total downtime assigned to failures of type j', 'number of storms during lifetime of wind farm', 'downtime during preparations for failures of type j in steady state', 'downtime during work in progress for failures of type j in steady state', 'downtime due to preparation for type j in storm and catch-up period']
+
+model_number = 'm120'
+
+model_desc = 'total downtime'
+
+var_names = ['total downtime', 'total downtime assigned to failures of type j', 'downtime due to waiting list in steady state', 'downtime due to waiting for lifting equipment', 'downtime during preventive maintenance']
+
+model_number = 'm121'
+
+model_desc = 'total downtime'
+
+var_names = ['total downtime', 'average availability fraction of all turbine in wind farm', 'number of turbines in farm', '(economic) lifetime of wind farm']
+
+model_number = 'm122'
+
+model_desc = 'number of vessels'
+
+var_names = ['number of vessels', 'number of people per crew', 'number of crews per shift', 'number of passengers per vessel']
+
+model_number = 'm123'
+
+model_desc = 'total time of access vessel rental per year'
+
+var_names = ['total time of access vessel rental per year', 'number of vessels', 'number of preventive maintenance actions', 'working hours per preventive maintenance action', 'number of failures of type j', 'time to perform diagnosis of failure of type j', 'time to perform repair activity for failure of type j', 'efficiency of crew deployment', 'shift duration', 'travel time in wind farm', 'travel time to and from wind farm', 'number of crews per shift', '(economic) lifetime of wind farm']
+
+model_number = 'm124'
+
+model_desc = 'total time that lifting equipment is in the farm per year (excluding the mobilisation times)'
+
+var_names = ['total time that lifting equipment is in the wind farm per year', 'average work in progress time for lifting activities', '(economic) lifetime of wind farm', 'number of failures of type j']
 
 
 
