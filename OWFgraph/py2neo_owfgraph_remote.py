@@ -36,7 +36,7 @@ avail = {'label': 'attribute',
 
 # delete_node('attribute', 'name')
 
-# create_relationship('variable', 'distance to coast', 'describes', 'attribute', 'geographic location of site')
+create_relationship('variable', 'inertia coefficient', 'describes', 'attribute', 'structure of the support structure')
 
 # create_node(avail)
 
@@ -48,3 +48,5 @@ avail = {'label': 'attribute',
 # del_node('object', 'foundation')
 
 # neighbours('attribute', 'availability of owf')
+
+print(exe("match (n:Variable) where n.name contains \'cable\' return n"))

@@ -1,0 +1,401 @@
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:16:21.306457) PID=9627
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:17:45.358891) PID=9669
+
+May 18 15:17:45 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:18:18.814019) PID=9682
+
+May 18 15:18:19 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:19:32.484762) PID=9749
+
+May 18 15:19:33 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:19:42.553307) PID=9758
+
+May 18 15:19:42 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:23:53.558060) PID=9904
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:24:02.507180) PID=9914
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:31:55.273087) PID=9979
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:32:41.869602) PID=10003
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:32:53.278034) PID=10012
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:33:14.716200) PID=10023
+
+May 18 15:33:15 E driver: Numerical overflow in the objective.
+May 18 15:33:15 E driver: driver: Numerical overflow in the objective.
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:33:42.309812) PID=10036
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:34:09.619847) PID=10050
+
+May 18 15:34:10 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:41:15.325517) PID=10331
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:41:41.103773) PID=10342
+
+May 18 15:41:41 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:41:53.898277) PID=10351
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:43:28.346343) PID=10376
+
+May 18 15:43:28 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:43:35.675804) PID=10384
+
+May 18 15:43:36 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:44:37.180538) PID=10402
+
+May 18 15:44:37 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:45:45.401867) PID=10423
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:47:33.231088) PID=10453
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:50:13.842600) PID=10514
+
+May 18 15:50:14 E driver: Can't add objective 'one.x'. Only 1 objectives are allowed
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:50:54.502981) PID=10535
+
+May 18 15:50:55 E driver: Can't add objective 'one.x'. Only 1 objectives are allowed
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:51:34.247613) PID=10555
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:52:05.093144) PID=10571
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:52:27.312961) PID=10583
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:52:37.877942) PID=10591
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:53:53.003859) PID=10605
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:54:22.134091) PID=10617
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:54:57.658162) PID=10628
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:56:32.421777) PID=10690
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:57:03.032519) PID=10701
+
+May 18 15:57:03 E driver: Equality constraints are not supported on this driver
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:57:13.723058) PID=10709
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:57:21.665760) PID=10715
+
+May 18 15:57:22 E driver: Equality constraints are not supported on this driver
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:57:28.076134) PID=10722
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:58:16.668928) PID=10739
+
+May 18 15:58:17 E driver: Equality constraints are not supported on this driver
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 15:58:23.128090) PID=10746
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:00:06.324234) PID=10788
+
+May 18 16:00:06 W driver: Singular matrix C in LSQ subproblem
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:00:46.508350) PID=10801
+
+May 18 16:00:46 W driver: Singular matrix C in LSQ subproblem
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:01:17.978251) PID=10815
+
+May 18 16:01:18 W driver: Singular matrix C in LSQ subproblem
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:02:40.620833) PID=10839
+
+May 18 16:02:41 W driver: Singular matrix C in LSQ subproblem
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:03:01.005600) PID=10851
+
+May 18 16:03:01 W driver: Singular matrix C in LSQ subproblem
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:03:14.083549) PID=10861
+
+May 18 16:03:14 W driver: Singular matrix C in LSQ subproblem
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:03:41.971952) PID=10871
+
+May 18 16:03:42 W driver: Singular matrix C in LSQ subproblem
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:04:31.774597) PID=10940
+
+May 18 16:04:32 W driver: Positive directional derivative for linesearch
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:05:46.031441) PID=10959
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:06:16.022085) PID=10971
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:06:38.223397) PID=10985
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:06:52.677685) PID=10995
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:07:00.032728) PID=11002
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:07:28.095556) PID=11012
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:07:53.924114) PID=11022
+
+May 18 16:07:54 E driver: initial value of: one.x is less than minimum
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:08:10.833103) PID=11034
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:08:18.037500) PID=11041
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:08:45.857807) PID=11054
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:09:23.946426) PID=11067
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:09:34.274678) PID=11077
+
+May 18 16:09:34 W driver: Positive directional derivative for linesearch
+
+
+*********** BEGIN NEW LOG ************** (2015-05-18 16:09:53.122629) PID=11087
+
+May 18 16:09:53 W driver: Positive directional derivative for linesearch
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:15:03.861858) PID=6744
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:15:19.081387) PID=6756
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:15:45.576482) PID=6769
+
+May 20 11:15:46 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:15:56.206620) PID=6778
+
+May 20 11:15:56 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:16:36.377549) PID=6793
+
+May 20 11:16:36 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:17:22.856295) PID=6811
+
+May 20 11:17:23 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:17:41.299794) PID=6820
+
+May 20 11:17:41 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:18:21.368802) PID=6840
+
+May 20 11:18:21 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:33:12.375947) PID=11006
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:33:29.550009) PID=11015
+
+May 20 11:33:29 W driver: Positive directional derivative for linesearch
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:33:45.772183) PID=11025
+
+May 20 11:33:46 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:33:53.407037) PID=11034
+
+May 20 11:33:53 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:37:21.217535) PID=11068
+
+May 20 11:37:21 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:40:37.185426) PID=11195
+
+May 20 11:40:37 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:40:41.978516) PID=11202
+
+May 20 11:40:42 E driver: math domain error
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 11:51:59.827052) PID=11676
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 12:55:58.707061) PID=13130
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 12:59:05.036920) PID=13325
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 12:59:33.294284) PID=13339
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:00:23.745128) PID=13400
+
+May 20 13:00:24 E root: driver must provide interface 'IDriver'
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:05:55.512662) PID=13509
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:06:23.189871) PID=13523
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:06:37.695488) PID=13533
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:06:50.207938) PID=13542
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:06:59.455495) PID=13549
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:08:27.334050) PID=13568
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:08:46.866287) PID=13580
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:09:11.415206) PID=13591
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:09:26.887866) PID=13601
+
+May 20 13:09:27 E driver: Variable 'optimizer' must be in ['ALHSO', 'ALPSO', 'COBYLA', 'CONMIN', 'KSOPT', 'MIDACO', 'NSGA2', 'PSQP', 'SLSQP', 'SOLVOPT'], but a value of SNOPT <type 'str'> was specified.
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:09:41.789948) PID=13610
+
+
+
+*********** BEGIN NEW LOG ************** (2015-05-20 13:09:56.953055) PID=13620
+
+
+
+*********** BEGIN NEW LOG ************** (2015-07-23 14:34:21.396906) PID=10949
+

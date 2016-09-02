@@ -37,7 +37,7 @@ def determine_if_in_wake(xt, yt, xw, yw, k, r0, alpha):  # According to Jensen M
     # Distance from point to line
     alpha = deg2rad(alpha + 180)
     distance_to_centre = abs(- tan(alpha) * xw + yw + tan(alpha) * xt - yt) / sqrt(1.0 + tan(alpha) ** 2.0)
-        # print distance_to_centre
+    # print distance_to_centre
     # Coordinates of the intersection between closest path from turbine in wake to centreline.
     X_int = (xw + tan(alpha) * yw + tan(alpha) * (tan(alpha) * xt - yt)) / (tan(alpha) ** 2.0 + 1.0)
     Y_int = (- tan(alpha) * (- xw - tan(alpha) * yw) - tan(alpha) * xt + yt) / (tan(alpha) ** 2.0 + 1.0)

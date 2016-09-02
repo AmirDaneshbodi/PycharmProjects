@@ -1,0 +1,11 @@
+cd genetic
+python genetic_optimiser.py
+cd ..
+cd pso
+python pso_horns_rev_reflecting.py
+cd ..
+cd genetic
+python genetic_optimiser2.py
+cd ..
+cd pso
+python pso_horns_rev_reflecting2.py

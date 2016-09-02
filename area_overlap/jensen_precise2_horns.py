@@ -18,7 +18,7 @@ for powertype in powers:  # Loop over power curves
             for rose in ['360']:#, '360']:  # Either run with 30 degrees, or 360 degrees wind roses.
 
                 # newpath = path.join('jensen_results/', powertype, thrusttype, rose)
-                newpath = path.join('weird/', powertype, thrusttype, rose)
+                newpath = path.join('small/', powertype, thrusttype, rose)
 
                 def power(U0):
                     #power7, power5, power3, powertable, powerstep
@@ -47,7 +47,7 @@ for powertype in powers:  # Loop over power curves
                         return Ctstep(U0)
 
                 chdir('/home/sebasanper/PycharmProjects/area_overlap')
-                layout = open('horns_rev.dat', 'r')
+                layout = open('coordinates.dat', 'r')
                 if rose == '360':
                     windrose = open('horns_rev_windrose2.dat', 'r')
                 elif rose == '30':
@@ -247,7 +247,7 @@ for powertype in powers:  # Loop over power curves
                             for i in range(turbine + 1, nt):
                                 determ = wake.determine_if_in_wake(layout_x[distance[turbine][1]], layout_y[distance[turbine][1]], layout_x[distance[i][1]], layout_y[distance[i][1]], k, r0, angle3)
                                 proportion[distance[turbine][1]][distance[i][1]] = determ[0]
-                                # If statement for proportion = 0
+                                # If statement for proportion != 0
                                 deficit_matrix[distance[i][1]][distance[turbine][1]] = proportion[distance[turbine][1]][distance[i][1]] * wake.wake_deficit(Ct(U[distance[turbine][1]]), k, determ[1], r0)
 
                         # for turb in range(nt):

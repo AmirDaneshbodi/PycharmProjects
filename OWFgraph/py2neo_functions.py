@@ -1,4 +1,5 @@
 # -- Every node requires at least a label, a name, a description and an author. The rest are optional but desired.
+
 from py2neo import Graph
 owfgraph = Graph("http://neo4j:kluyverwegwind@owfgraph.lr.tudelft.nl:7474/db/data/")
 # owfgraph = Graph("http://neo4j:neo4j@localhost:7474/db/data/")
@@ -9,7 +10,9 @@ def make_node(label, name, description, author, **keywords):
         extra = ''
         for key in keywords.keys():
             extra += ', ' + key + ':"' + keywords[key] + '"'
-        print exe('CREATE (n:' + label.title() + '{name:"' + name + '", description:"' + description + '", author:"' + author + '"' + extra + '}) return labels(n), n.name')
+        print(exe(
+            'CREATE (n:' + label.title() + '{name:"' + name + '", description:"' + description + '", author:"' + author + '"' + extra + '}) return labels(n), n.name'))
+
 
 # Create a new node with a dictionary as defined below.
 # node_name = {'label': 'procedure',
@@ -43,7 +46,7 @@ def create_node(node_name):
             order += ', ' + key + '="' + node2[key] + '"'
         i = 1
     order += ')'
-    exec order in globals(), locals()
+    exec(order, globals(), locals())
 
 
 # Add a missing property to an existing node. Requires node's label and name, and property and value to be added.
@@ -56,7 +59,7 @@ def create_property(label, name, property_key, property_value):
 def delete_relationship(label_source, name_source, relationship, label_target, name_target):
     exe('MATCH (n:' + label_source.title() + '{name:\'' + name_source + '\'})-[k:' + relationship.upper() + ']-(o:' +
         label_target.title() + '{name:\'' + name_target + '\'}) DELETE k')
-    print 'Relationship deleted: (' + name_source + ') -- [' + relationship.upper() + '] --> (' + name_target + ')'
+    print('Relationship deleted: (' + name_source + ') -- [' + relationship.upper() + '] --> (' + name_target + ')')
 
 
 # Delete node with relationships. Requires node's label and name.

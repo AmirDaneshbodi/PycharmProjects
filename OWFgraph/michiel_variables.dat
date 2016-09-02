@@ -15,12 +15,9 @@ costs of operation and maintenance excluding management costs
 costs of offshore works of rotor-nacelle assembly installation
 costs of consumables per maintenance visit
 costs of rotor-nacelle assembly
-costs of new rotor-nacelle assembly design
-costs of reference rotor-nacelle assembly design V80
 costs of consumables per repair of failure type j
 actualised costs without bottom lease and infield cable costs
 costs for year t
-costs for year t for wind farm i
 costs of access vessel rental
 Weibull scale factor
 drag coefficient
@@ -28,7 +25,9 @@ inertia coefficient
 thrust coefficient
 Weibull scale factor for storm length
 Weibull scale factor for storm length for reference access method
+
 diameter
+
 dimensionless grain size
 diameter of the armour
 diameter at the base
@@ -40,11 +39,11 @@ diameter of the insulation screen
 diameter of outer serving
 outer diameter of monopile
 rotor diameter
-rotor diameter of new rotor-nacelle assembly design
-rotor diameter of reference rotor-nacelle assembly design V80
 diameter at the top
 outer diameter of tower
+
 distance between centres of wake and rotor or of two wakes
+
 15 percentile sieve size of rock
 15 percentile sieve size of rock in armour layer
 15 percentile sieve size of rock or soil below filter layer
@@ -57,27 +56,35 @@ distance between centres of wake and rotor or of two wakes
 85 percentile sieve size of rock in filter layer
 85 percentile sieve size of rock in filter layer i
 90 percentile sieve size of soil
-burial depth
+electrical cable burial depth
 pile clamping depth below mudline
+
 eccentricity of centre of gravity
+
 distance from harbour to boundary of wind farm
 50% passing nominal diameter
 water depth
-electricity production
+
 design modulus of elasticity
+
 annual loss in electrical infrastructure
 actualised total energy yield without electrical and array losses
-annual electricity production
+
 electricity production in year t
-electricity production in year t for wind farm i
-electricity production in year t ' for wind farm j
+
 equivalent geometrical imperfection
+
 drag force
+
 amplitude of drag force
+
 gravity force
+
 amplitude of inertia force
+
 lateral force on pile at mudline
 force in z direction
+
 frequency of alternating current
 storm fraction
 storm fraction for reference access method

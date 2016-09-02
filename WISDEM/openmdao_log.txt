@@ -1,0 +1,1214 @@
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 15:51:59.847512) PID=19064
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 16:03:57.133905) PID=19641
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 16:04:11.670641) PID=19655
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 16:05:25.196529) PID=19707
+
+Jun 20 16:05:26 W tcc_a: The following components are not in any workflow but are needed by other workflows, so they will be executed once per execution of this Assembly: ['tower', 'nacelle', 'hub', 'blades']
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 16:06:25.894318) PID=19724
+
+Jun 20 16:06:26 W tcc_a: The following components are not in any workflow but are needed by other workflows, so they will be executed once per execution of this Assembly: ['tower', 'nacelle', 'hub', 'blades']
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 16:17:35.240214) PID=19964
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 16:57:53.310529) PID=20773
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 16:59:52.363064) PID=20828
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:00:30.344203) PID=20844
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:00:55.611047) PID=20858
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:04:33.107691) PID=20938
+
+Jun 20 17:04:34 W root: the following variables are connected to other components but are missing in the replacement object: ['bos_breakdown']
+Jun 20 17:04:34 E bos_a: Couldn't find metadata for trait bos_breakdown
+Jun 20 17:04:34 W root: Couldn't connect 'bos_a.bos_breakdown' to 'bos_breakdown': : Can't connect 'bos_a.bos_breakdown' to 'bos_breakdown': Couldn't find metadata for traits 'bos_a.bos_breakdown'
+Jun 20 17:04:35 W fpi: The following components will execute EVERY iteration of this workflow (unnecessarily): ['_pseudo_2']
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:06:43.125324) PID=20992
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:13:08.537321) PID=21149
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:14:01.130428) PID=21175
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:14:23.044467) PID=21188
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:17:31.836729) PID=21237
+
+Jun 20 17:17:36 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:17:36 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:17:36 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:17:36 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:17:36 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:17:36 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:17:36 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:17:36 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:17:36 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:17:36 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:17:36 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:17:36 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:17:36 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:17:36 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:17:36 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:17:36 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:17:36 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:17:36 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:17:36 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:17:36 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:17:36 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:17:36 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:17:36 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:17:37 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:17:37 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:17:37 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:17:37 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:17:37 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:17:37 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:17:37 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:17:37 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:17:37 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:17:37 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:17:37 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:17:37 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:17:37 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:17:37 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:17:37 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:17:37 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:17:37 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:17:37 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:17:37 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:17:37 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:17:37.378956) PID=21254
+
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:17:37 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:17:37 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:17:37 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:17:37 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:17:37 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:17:37 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:17:37 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:17:37 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:17:37 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:17:37 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:17:37 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:17:37 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+Jun 20 17:17:39 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:17:39 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:17:39 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:17:39 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:17:39 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:17:39 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:17:39 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:17:39 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:17:39 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:17:39 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:17:39 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:17:39 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:17:39 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:17:39 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:17:39 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:17:39 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:17:39 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:17:39 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:17:39 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:17:39 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:17:39 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:17:39 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:17:39 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:17:39 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:17:39 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:17:39 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:17:39 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:17:40 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:17:40 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:17:40 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:17:40 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:17:40 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:17:40 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:17:40 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:17:40 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:17:40 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:17:40 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:17:40 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:17:40 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:17:40 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:17:40 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:17:40 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:17:40 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:17:40 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:17:40 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:17:40 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:17:40 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:17:40 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:17:40 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:17:40 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:17:40 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:17:40 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:19:17.367155) PID=21320
+
+Jun 20 17:19:19 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:19:19 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:19:19 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:19:19 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:19:19 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:19:19 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:19:19 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:19:19 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:19:19 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:19:19 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:19:19 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:19:19 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:19:19 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:19:19 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:19:19 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:19:19 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:19:19 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:19:19 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:19:19 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:19:19 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:19:19 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:19:19 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:19:19 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:19:19 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:19:19 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:19:19 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:19:19 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:19:20 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:19:20 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:19:20 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:19:20 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:19:20 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:19:20 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:19:20 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:19:20 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:19:20 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:19:20 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:19:20 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:19:20 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:19:20 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:19:20 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:19:20 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:19:20 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:19:20 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:19:20 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:19:20 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:19:20 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:19:20 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:19:20 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:19:20 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:19:20 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:19:20 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:19:43.279392) PID=21335
+
+Jun 20 17:19:45 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:19:45 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:19:45 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:19:45 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:19:45 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:19:45 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:19:45 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:19:45 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:19:45 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:19:45 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:19:45 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:19:45 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:19:45 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:19:45 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:19:45 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:19:45 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:19:45 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:19:45 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:19:45 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:19:45 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:19:45 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:19:45 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:19:45 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:19:45 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:19:45 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:19:45 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:19:45 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:19:45 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:19:45 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:19:45 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:19:45 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:19:45 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:19:45 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:19:45 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:19:45 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:19:45 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:19:45 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:19:45 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:19:45 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:19:45 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:19:45 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:21:54.316761) PID=21396
+
+Jun 20 17:21:56 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:21:56 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:21:56 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:21:56 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:21:56 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:21:56 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:21:56 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:21:56 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:21:56 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:21:56 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:21:56 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:21:56 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:21:56 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:21:56 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:21:56 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:21:56 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:21:56 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:21:56 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:21:56 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:21:56 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:21:56 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:21:56 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:21:56 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:21:56 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:21:56 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:21:56 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:21:56 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:21:57 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:21:57 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:21:57 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:21:57 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:21:57 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:21:57 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:21:57 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:21:57 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:21:57 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:21:57 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:21:57 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:21:57 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:21:57 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:21:57 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:21:57 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:21:57 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:21:57 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:21:57 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:21:57 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:21:57 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:21:57 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:21:57 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:21:57 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:21:57 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:21:57 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+Jun 20 17:21:57 E tower: Variable 'L_reinforced' must be an array-like object, but a value of 30.0 (<type 'float'>) was specified.
+Jun 20 17:21:57 E tower: Variable 'L_reinforced' must be an array-like object, but a value of 30.0 (<type 'float'>) was specified.
+Jun 20 17:21:57 E tower: Variable 'L_reinforced' must be an array-like object, but a value of 30.0 (<type 'float'>) was specified.
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:22:39.485149) PID=21420
+
+Jun 20 17:22:41 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:22:41 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:22:41 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:22:41 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:22:41 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:22:41 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:22:41 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:22:41 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:22:41 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:22:41 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:22:41 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:22:41 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:22:41 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:22:41 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:22:41 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:22:41 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:22:41 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:22:41 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:22:41 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:22:41 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:22:41 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:22:41 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:22:41 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:22:41 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:22:41 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:22:41 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:22:41 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:22:42 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:22:42 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:22:42 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:22:42 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:22:42 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:22:42 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:22:42 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:22:42 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:22:42 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:22:42 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:22:42 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:22:42 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:22:42 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:22:42 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:22:42 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:22:42 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:22:42 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:22:42 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:22:42 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:22:42 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:22:42 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:22:42 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:22:42 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:22:42 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:22:42 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:22:54.851236) PID=21434
+
+Jun 20 17:22:56 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:22:57 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:22:57 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:22:57 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:22:57 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:22:57 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:22:57 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:22:57 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:22:57 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:22:57 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:22:57 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:22:57 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:22:57 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:22:57 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:22:57 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:22:57 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:22:57 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:22:57 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:22:57 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:22:57 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:22:57 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:22:57 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:22:57 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:22:57 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:22:57 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:22:57 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:22:57 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:22:57 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:22:57 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:22:57 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:22:57 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:22:57 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:22:57 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:22:57 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:22:57 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:22:57 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:22:57 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:22:57 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:22:57 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:22:57 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:22:57 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+Jun 20 17:22:57 E tower: Variable 'sigma_y' must be an array-like object, but a value of 450000000.0 (<type 'float'>) was specified.
+Jun 20 17:22:57 E tower: Variable 'sigma_y' must be an array-like object, but a value of 450000000.0 (<type 'float'>) was specified.
+Jun 20 17:22:57 E tower: Variable 'sigma_y' must be an array-like object, but a value of 450000000.0 (<type 'float'>) was specified.
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:23:15.578924) PID=21449
+
+Jun 20 17:23:17 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:23:17 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:23:17 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:23:17 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:23:17 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:23:17 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:23:17 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:23:17 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:23:17 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:23:17 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:23:17 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:23:17 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:23:17 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:23:17 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:23:17 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:23:17 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:23:17 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:23:17 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:23:17 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:23:17 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:23:17 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:23:17 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:23:17 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:23:17 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:23:17 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:23:17 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:23:17 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:23:18 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:23:18 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:23:18 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:23:18 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:23:18 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:23:18 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:23:18 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:23:18 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:23:18 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:23:18 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:23:18 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:23:18 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:23:18 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:23:18 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:23:18 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:23:18 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:23:18 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:23:18 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:23:18 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:23:18 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:23:18 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:23:18 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:23:18 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:23:18 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:23:18 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+Jun 20 17:23:18 E tower: Variable 'rho' must be an array-like object, but a value of 8500.0 (<type 'float'>) was specified.
+Jun 20 17:23:18 E tower: Variable 'rho' must be an array-like object, but a value of 8500.0 (<type 'float'>) was specified.
+Jun 20 17:23:18 E tower: Variable 'rho' must be an array-like object, but a value of 8500.0 (<type 'float'>) was specified.
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:23:35.910927) PID=21462
+
+Jun 20 17:23:37 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:23:38 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:23:38 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:23:38 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:23:38 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:23:38 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:23:38 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:23:38 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:23:38 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:23:38 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:23:38 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:23:38 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:23:38 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:23:38 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:23:38 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:23:38 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:23:38 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:23:38 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:23:38 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:23:38 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:23:38 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:23:38 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:23:38 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:23:38 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:23:38 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:23:38 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:23:38 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:23:38 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:23:38 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:23:38 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:23:38 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:23:38 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:23:38 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:23:38 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:23:38 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:23:38 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:23:38 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:23:38 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:23:38 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:23:38 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:23:38 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+Jun 20 17:23:38 E tower: Variable 'E' must be an array-like object, but a value of 2.1e+11 (<type 'float'>) was specified.
+Jun 20 17:23:38 E tower: Variable 'E' must be an array-like object, but a value of 2.1e+11 (<type 'float'>) was specified.
+Jun 20 17:23:38 E tower: Variable 'E' must be an array-like object, but a value of 2.1e+11 (<type 'float'>) was specified.
+
+
+*********** BEGIN NEW LOG ************** (2016-06-20 17:23:43.322935) PID=21470
+
+Jun 20 17:23:45 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 20 17:23:45 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 20 17:23:45 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 20 17:23:45 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 20 17:23:45 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Az
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 20 17:23:45 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 20 17:23:45 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 20 17:23:45 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 20 17:23:45 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 20 17:23:45 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait t
+Jun 20 17:23:45 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 20 17:23:45 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 20 17:23:45 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait d
+Jun 20 17:23:45 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 20 17:23:45 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Py
+Jun 20 17:23:45 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait Px
+Jun 20 17:23:45 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait stress
+Jun 20 17:23:45 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 20 17:23:45 E tower,tower1: Couldn't find metadata for trait z
+Jun 20 17:23:45 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 20 17:23:45 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 20 17:23:45 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 20 17:23:45 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 20 17:23:45 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 20 17:23:45 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 20 17:23:45 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Az
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 20 17:23:45 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 20 17:23:45 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 20 17:23:45 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 20 17:23:45 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 20 17:23:45 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 20 17:23:45 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait t
+Jun 20 17:23:45 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 20 17:23:45 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 20 17:23:45 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 20 17:23:46 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 20 17:23:46 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 20 17:23:46 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 20 17:23:46 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 20 17:23:46 E tower,tower2: Couldn't find metadata for trait Px
+Jun 20 17:23:46 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 20 17:23:46 E tower,tower2: Couldn't find metadata for trait Py
+Jun 20 17:23:46 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 20 17:23:46 E tower,tower2: Couldn't find metadata for trait d
+Jun 20 17:23:46 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 20 17:23:46 E tower,tower2: Couldn't find metadata for trait stress
+Jun 20 17:23:46 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 20 17:23:46 E tower,tower2: Couldn't find metadata for trait z
+Jun 20 17:23:46 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+Jun 20 17:23:47 E root: cannot set 'tower.mIxz[0]' from 'rna.rna_I_TT[4]': index 0 is out of bounds for axis 0 with size 0
+
+
+*********** BEGIN NEW LOG ************** (2016-06-21 17:33:53.820652) PID=7572
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-21 17:34:11.802723) PID=7587
+
+Jun 21 17:34:13 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Ixx
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Ixx' to 'tower1.Ixx': tower: Can't connect 'props.Ixx' to 'tower1.Ixx': Couldn't find metadata for traits 'tower1.Ixx'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Mzz
+Jun 21 17:34:14 W tower: Couldn't connect 'Mzz1' to 'tower1.Mzz': tower: Can't connect 'Mzz1' to 'tower1.Mzz': Couldn't find metadata for traits 'tower1.Mzz'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Fx
+Jun 21 17:34:14 W tower: Couldn't connect 'Fx1' to 'tower1.Fx': tower: Can't connect 'Fx1' to 'tower1.Fx': Couldn't find metadata for traits 'tower1.Fx'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait qdyn
+Jun 21 17:34:14 W tower: Couldn't connect 'distLoads1.qdyn' to 'tower1.qdyn': tower: Can't connect 'distLoads1.qdyn' to 'tower1.qdyn': Couldn't find metadata for traits 'tower1.qdyn'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait global_buckling
+Jun 21 17:34:14 W tower: Couldn't connect 'tower1.global_buckling' to 'global_buckling1': tower: Can't connect 'tower1.global_buckling' to 'global_buckling1': Couldn't find metadata for traits 'tower1.global_buckling'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Az
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Az' to 'tower1.Az': tower: Can't connect 'props.Az' to 'tower1.Az': Couldn't find metadata for traits 'tower1.Az'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Asy
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Asy' to 'tower1.Asy': tower: Can't connect 'props.Asy' to 'tower1.Asy': Couldn't find metadata for traits 'tower1.Asy'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Asx
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Asx' to 'tower1.Asx': tower: Can't connect 'props.Asx' to 'tower1.Asx': Couldn't find metadata for traits 'tower1.Asx'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait shell_buckling
+Jun 21 17:34:14 W tower: Couldn't connect 'tower1.shell_buckling' to 'shell_buckling1': tower: Can't connect 'tower1.shell_buckling' to 'shell_buckling1': Couldn't find metadata for traits 'tower1.shell_buckling'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Mxx
+Jun 21 17:34:14 W tower: Couldn't connect 'Mxx1' to 'tower1.Mxx': tower: Can't connect 'Mxx1' to 'tower1.Mxx': Couldn't find metadata for traits 'tower1.Mxx'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Jz
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Jz' to 'tower1.Jz': tower: Can't connect 'props.Jz' to 'tower1.Jz': Couldn't find metadata for traits 'tower1.Jz'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait top_deflection
+Jun 21 17:34:14 W tower: Couldn't connect 'tower1.top_deflection' to 'top_deflection1': tower: Can't connect 'tower1.top_deflection' to 'top_deflection1': Couldn't find metadata for traits 'tower1.top_deflection'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Fy
+Jun 21 17:34:14 W tower: Couldn't connect 'Fy1' to 'tower1.Fy': tower: Can't connect 'Fy1' to 'tower1.Fy': Couldn't find metadata for traits 'tower1.Fy'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait plidx
+Jun 21 17:34:14 W tower: Couldn't connect 'plidx1' to 'tower1.plidx': tower: Can't connect 'plidx1' to 'tower1.plidx': Couldn't find metadata for traits 'tower1.plidx'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait t
+Jun 21 17:34:14 W tower: Couldn't connect 'geometry.t_full' to 'tower1.t': tower: Can't connect 'geometry.t_full' to 'tower1.t': Couldn't find metadata for traits 'tower1.t'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Fz
+Jun 21 17:34:14 W tower: Couldn't connect 'Fz1' to 'tower1.Fz': tower: Can't connect 'Fz1' to 'tower1.Fz': Couldn't find metadata for traits 'tower1.Fz'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Iyy
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Iyy' to 'tower1.Iyy': tower: Can't connect 'props.Iyy' to 'tower1.Iyy': Couldn't find metadata for traits 'tower1.Iyy'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Myy
+Jun 21 17:34:14 W tower: Couldn't connect 'Myy1' to 'tower1.Myy': tower: Can't connect 'Myy1' to 'tower1.Myy': Couldn't find metadata for traits 'tower1.Myy'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait d
+Jun 21 17:34:14 W tower: Couldn't connect 'geometry.d_full' to 'tower1.d': tower: Can't connect 'geometry.d_full' to 'tower1.d': Couldn't find metadata for traits 'tower1.d'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Pz
+Jun 21 17:34:14 W tower: Couldn't connect 'distLoads1.Pz' to 'tower1.Pz': tower: Can't connect 'distLoads1.Pz' to 'tower1.Pz': Couldn't find metadata for traits 'tower1.Pz'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Py
+Jun 21 17:34:14 W tower: Couldn't connect 'distLoads1.Py' to 'tower1.Py': tower: Can't connect 'distLoads1.Py' to 'tower1.Py': Couldn't find metadata for traits 'tower1.Py'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait Px
+Jun 21 17:34:14 W tower: Couldn't connect 'distLoads1.Px' to 'tower1.Px': tower: Can't connect 'distLoads1.Px' to 'tower1.Px': Couldn't find metadata for traits 'tower1.Px'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait stress
+Jun 21 17:34:14 W tower: Couldn't connect 'tower1.stress' to 'stress1': tower: Can't connect 'tower1.stress' to 'stress1': Couldn't find metadata for traits 'tower1.stress'
+Jun 21 17:34:14 E tower,tower1: Couldn't find metadata for trait z
+Jun 21 17:34:14 W tower: Couldn't connect 'z_full' to 'tower1.z': tower: Can't connect 'z_full' to 'tower1.z': Couldn't find metadata for traits 'tower1.z'
+Jun 21 17:34:14 W tower: the following variables are connected to other components but are missing in the replacement object: ['Jz', 'Pz', 'global_buckling', 'Py', 'Ixx', 'Px', 'z', 'plidx', 'Mxx', 'top_deflection', 'Fx', 'Fy', 'Asy', 'Asx', 'Mzz', 'Iyy', 'shell_buckling', 'd', 'Myy', 'stress', 't', 'Az', 'Fz', 'qdyn']
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Ixx
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Ixx' to 'tower2.Ixx': tower: Can't connect 'props.Ixx' to 'tower2.Ixx': Couldn't find metadata for traits 'tower2.Ixx'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait top_deflection
+Jun 21 17:34:14 W tower: Couldn't connect 'tower2.top_deflection' to 'top_deflection2': tower: Can't connect 'tower2.top_deflection' to 'top_deflection2': Couldn't find metadata for traits 'tower2.top_deflection'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Mzz
+Jun 21 17:34:14 W tower: Couldn't connect 'Mzz2' to 'tower2.Mzz': tower: Can't connect 'Mzz2' to 'tower2.Mzz': Couldn't find metadata for traits 'tower2.Mzz'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Fx
+Jun 21 17:34:14 W tower: Couldn't connect 'Fx2' to 'tower2.Fx': tower: Can't connect 'Fx2' to 'tower2.Fx': Couldn't find metadata for traits 'tower2.Fx'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Myy
+Jun 21 17:34:14 W tower: Couldn't connect 'Myy2' to 'tower2.Myy': tower: Can't connect 'Myy2' to 'tower2.Myy': Couldn't find metadata for traits 'tower2.Myy'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait qdyn
+Jun 21 17:34:14 W tower: Couldn't connect 'distLoads2.qdyn' to 'tower2.qdyn': tower: Can't connect 'distLoads2.qdyn' to 'tower2.qdyn': Couldn't find metadata for traits 'tower2.qdyn'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Az
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Az' to 'tower2.Az': tower: Can't connect 'props.Az' to 'tower2.Az': Couldn't find metadata for traits 'tower2.Az'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Asy
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Asy' to 'tower2.Asy': tower: Can't connect 'props.Asy' to 'tower2.Asy': Couldn't find metadata for traits 'tower2.Asy'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Asx
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Asx' to 'tower2.Asx': tower: Can't connect 'props.Asx' to 'tower2.Asx': Couldn't find metadata for traits 'tower2.Asx'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Mxx
+Jun 21 17:34:14 W tower: Couldn't connect 'Mxx2' to 'tower2.Mxx': tower: Can't connect 'Mxx2' to 'tower2.Mxx': Couldn't find metadata for traits 'tower2.Mxx'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Jz
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Jz' to 'tower2.Jz': tower: Can't connect 'props.Jz' to 'tower2.Jz': Couldn't find metadata for traits 'tower2.Jz'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait shell_buckling
+Jun 21 17:34:14 W tower: Couldn't connect 'tower2.shell_buckling' to 'shell_buckling2': tower: Can't connect 'tower2.shell_buckling' to 'shell_buckling2': Couldn't find metadata for traits 'tower2.shell_buckling'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Fy
+Jun 21 17:34:14 W tower: Couldn't connect 'Fy2' to 'tower2.Fy': tower: Can't connect 'Fy2' to 'tower2.Fy': Couldn't find metadata for traits 'tower2.Fy'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait global_buckling
+Jun 21 17:34:14 W tower: Couldn't connect 'tower2.global_buckling' to 'global_buckling2': tower: Can't connect 'tower2.global_buckling' to 'global_buckling2': Couldn't find metadata for traits 'tower2.global_buckling'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait plidx
+Jun 21 17:34:14 W tower: Couldn't connect 'plidx2' to 'tower2.plidx': tower: Can't connect 'plidx2' to 'tower2.plidx': Couldn't find metadata for traits 'tower2.plidx'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait t
+Jun 21 17:34:14 W tower: Couldn't connect 'geometry.t_full' to 'tower2.t': tower: Can't connect 'geometry.t_full' to 'tower2.t': Couldn't find metadata for traits 'tower2.t'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Fz
+Jun 21 17:34:14 W tower: Couldn't connect 'Fz2' to 'tower2.Fz': tower: Can't connect 'Fz2' to 'tower2.Fz': Couldn't find metadata for traits 'tower2.Fz'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Iyy
+Jun 21 17:34:14 W tower: Couldn't connect 'props.Iyy' to 'tower2.Iyy': tower: Can't connect 'props.Iyy' to 'tower2.Iyy': Couldn't find metadata for traits 'tower2.Iyy'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Pz
+Jun 21 17:34:14 W tower: Couldn't connect 'distLoads2.Pz' to 'tower2.Pz': tower: Can't connect 'distLoads2.Pz' to 'tower2.Pz': Couldn't find metadata for traits 'tower2.Pz'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Px
+Jun 21 17:34:14 W tower: Couldn't connect 'distLoads2.Px' to 'tower2.Px': tower: Can't connect 'distLoads2.Px' to 'tower2.Px': Couldn't find metadata for traits 'tower2.Px'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait Py
+Jun 21 17:34:14 W tower: Couldn't connect 'distLoads2.Py' to 'tower2.Py': tower: Can't connect 'distLoads2.Py' to 'tower2.Py': Couldn't find metadata for traits 'tower2.Py'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait d
+Jun 21 17:34:14 W tower: Couldn't connect 'geometry.d_full' to 'tower2.d': tower: Can't connect 'geometry.d_full' to 'tower2.d': Couldn't find metadata for traits 'tower2.d'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait stress
+Jun 21 17:34:14 W tower: Couldn't connect 'tower2.stress' to 'stress2': tower: Can't connect 'tower2.stress' to 'stress2': Couldn't find metadata for traits 'tower2.stress'
+Jun 21 17:34:14 E tower,tower2: Couldn't find metadata for trait z
+Jun 21 17:34:14 W tower: Couldn't connect 'z_full' to 'tower2.z': tower: Can't connect 'z_full' to 'tower2.z': Couldn't find metadata for traits 'tower2.z'
+Jun 21 17:34:16 E root: cannot set 'tower.mIxz[0]' from 'rna.rna_I_TT[4]': index 0 is out of bounds for axis 0 with size 0
+
+
+*********** BEGIN NEW LOG ************** (2016-06-21 17:35:34.896737) PID=7631
+
+
+
+*********** BEGIN NEW LOG ************** (2016-06-22 11:07:44.558563) PID=18974
+
