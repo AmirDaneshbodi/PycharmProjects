@@ -32,3 +32,6 @@ def ct_LLT(U0):
         return ct_table_LLT(U0)
     else:
         return interpolate(floor(U0), ct_table_LLT(floor(U0)), ceil(U0), ct_table_LLT(ceil(U0)), U0)
+
+if __name__ == '__main__':
+    print ct_v90(8.5)
