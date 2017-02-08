@@ -77,8 +77,8 @@ def frandsen(ambient_turbulence, Ct, Wohler_exponent, distance_neighbours, large
 def Quarton(ambient_turb_percentage, Ct, Diameter, tsr, x):
 
     D = Diameter
-    Ia = ambient_turb_percentage * 100
-    K1 = 5.7
+    Ia = ambient_turb_percentage * 100.0
+    K1 = 4.8
     a1 = 0.7
     a2 = 0.68
     a3 = - 0.96
@@ -118,12 +118,12 @@ def Quarton(ambient_turb_percentage, Ct, Diameter, tsr, x):
 #     I_add = I_shear + I_diff
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # 7d downstream
     with open('turb_downstream_d.dat', 'w') as out:
-        for x in range(1, 200):
-            d = float(x) / 10.0
-            out.write('{0}\t{1}\t{2}\t{3}\t{4}\n'.format(d, danish_recommendation(0.08, 8.5, d), Larsen_turbulence(0.08, d, 0.79), Quarton(0.08, 0.79, 80.0, 9.0, d * 80.0), frandsen(0.08, 0.79, 3.0, [d])))
+        for x in range(1, 560):
+            d = float(x) * 10.0
+            out.write('{0}\t{1}\t{2}\t{3}\t{4}\n'.format(d, danish_recommendation(0.08, 8.5, d), Larsen_turbulence(0.08, d, 0.79), Quarton(0.08, 0.79, 80.0, 9.0, d * 80.0), frandsen(0.08, 0.79, 8.4, [d])))
 
     # print danish_recommendation(0.08, 8.5, 7.0)
     # print Larsen_turbulence(0.08, 7.0, 0.79)

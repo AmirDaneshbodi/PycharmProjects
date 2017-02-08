@@ -170,7 +170,7 @@ if __name__ == '__main__':
 
     prob = Problem(root)
     prob.setup()
-    prob['jensen.layout_x'] =  prob['ainslie.layout_x'] = prob['larsen.layout_x'] = array(layout_x)
+    prob['jensen.layout_x'] = prob['ainslie.layout_x'] = prob['larsen.layout_x'] = array(layout_x)
     prob['jensen.layout_y'] = prob['ainslie.layout_y'] = prob['larsen.layout_y'] = array(layout_y)
     prob['jensen.windrose_direction'] = prob['ainslie.windrose_direction'] = prob['larsen.windrose_direction'] = array(windrose_direction)
     prob['jensen.windrose_speed'] = prob['ainslie.windrose_speed'] = prob['larsen.windrose_speed'] = array(windrose_speed)
